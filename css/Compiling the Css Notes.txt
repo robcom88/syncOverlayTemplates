@@ -1,0 +1,17 @@
+
+use to namespace the bootstrap library (or any other
+framework css library) so that overlay styles don't
+clobber customer web page.
+
+	Usage:
+	assumes your *.less file is in \css folder
+
+	use command line.  change dir to \tools\less.js-windows-v2.5.1a
+
+	execute command:  .\lessc.cmd ..\..\{source}.less ..\..\css\{target}.css
+	
+	to compress (minify):
+	.\lessc.cmd --clean-css ..\..\{source}.less ..\..\css\{target}.css
+
+	{source} your *.less source file name
+	{target} your desired *.css file.

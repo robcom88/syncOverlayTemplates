@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<title>Overlay Template Light 3 Plans</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/was.css">
+
+<head>
+<style>
+
+</style>
+</head>
+
+<body>
+
+
+<h1>Modal Overlay Template with 3 Plans, includes Login and Activate links with very little text, plan descriptions should toggle with the image/title/price</h1>
+<h2>Footer terms and conditions and privacy policy links.  The top-left header element could be a stylized font of the publication name, or just a logo image. </h2>
+<img src="img/3plan_light_mockup.jpg" alt="3 plan light overlay" height="auto">
+
+<!-- Trigger/Open The Modal -->
+<button id="myBtn">Open Modal</button>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    
+	<div class="modal-header sync-w3-white">
+    <!--   <span class="close">X</span> -->
+
+     <div class="sync-w3-container sync-w3-half">
+       <img src="img/ACMENewsLogo.png" alt="ACME News Logo" style="width:90%;height:auto;">
+     </div>
+
+     <div class="sync-w3-container sync-w3-half">
+      <div class="sync-w3-accordion sync-w3-white">
+       <div onclick="myFunction('Login')" class="sync-w3-left-align sync-w3-white"><h5>Already a subscriber?  <u>Log in</u></h5></div>
+        <div id="Login" class="sync-w3-accordion-content">
+		 <div class="sync-w3-row sync-w3-padding-bottom">
+          <div class="sync-w3-col" style="width:95%"><input class="sync-w3-input sync-w3-border sync-w3-center" type="text" placeholder="Email"></div>
+          <div class="sync-w3-col" style="width:5%"><p></p></div>
+         </div>
+	  	 <div class="sync-w3-row sync-w3-padding-bottom">
+          <div class="sync-w3-col" style="width:95%"><input class="sync-w3-input sync-w3-border sync-w3-center" type="text" placeholder="Password"></div>
+          <div class="sync-w3-col" style="width:5%"><p></p></div>
+         </div>
+	  	 <div class="sync-w3-row sync-w3-padding-bottom">
+          <div class="sync-w3-col" style="width:95%"><input class="sync-w3-btn-block sync-w3-light-grey sync-w3-border" value="Submit"></div>
+          <div class="sync-w3-col" style="width:5%"><p></p></div>
+         </div>	
+         <div class="sync-w3-row">
+          <div class="sync-w3-half">	
+           <p><a href="#"><i>Forgot Password?</i></a></p>
+		  </div>
+		  <div class="sync-w3-half">	
+           <p><input class="sync-w3-check" type="checkbox" checked="checked"><label class="sync-w3-label"> Remember Me</label></p>
+		  </div>
+		 </div>			
+
+        </div>
+	  </div>
+   
+	   <div class="sync-w3-accordion sync-w3-white">		  
+        <div onclick="myFunction('Link')" class="sync-w3-left-align sync-w3-white"><h5>Have a print subscription?  <u>Activate now</u></h5></div>
+         <div id="Link" class="sync-w3-accordion-content padding:10px 10px">
+	  	  <div class="sync-w3-row sync-w3-padding-bottom">
+           <div class="sync-w3-col" style="width:95%"><input class="sync-w3-input sync-w3-border sync-w3-center" type="text" placeholder="Email"></div>
+          </div>
+	  	  <div class="sync-w3-row sync-w3-padding-bottom">
+           <div class="sync-w3-col" style="width:95%"><input class="sync-w3-btn-block sync-w3-light-grey sync-w3-border" value="Submit"></div>
+          </div>			
+         </div>
+       </div>
+	 </div>		
+    </div>
+  	 
+	<div class="modal-body sync-w3-white sync-w3-text-black">
+     <div class="sync-w3-row sync-w3-center"> 
+	  
+	  <h2><b><br>Become a Subscriber!</b></h2>
+	  <h3>You have read your 10 free articles for the month.<br>Select a plan below to start your subscription today.</h3>
+	 </div>
+	
+	 <div class="sync-w3-container sync-w3-padding-24"> 
+	
+	    <div class="sync-w3-container sync-w3-third">	
+		 <div class="sync-w3-card-24 sync-w3-round-xlarge sync-w3-border sync-w3-center">
+		  <img src="img/2d2.png" alt="Digital Only" style="width:85%">
+		  <div class="sync-w3-container sync-w3-center sync-w3-text-dark-blue">
+		   <h5>Digital Only Access</h5>
+		   <h5>$9.99 a month</h5>
+			<div class="sync-w3-accordion sync-w3-white">		  
+             <div onclick="myFunction('Details1')" class="sync-w3-center sync-w3-white sync-w3-text-dark-blue"><h6><u>Plan details</u></h6></div>
+             <div id="Details1" class="sync-w3-accordion-content padding:10px 10px">
+	  	      <div class="sync-w3-row sync-w3-padding-bottom">
+               <div class="sync-w3-col sync-w3-text-dark-blue sync-w3-left-align" style="width:95%">
+			    <ul>
+				 <li>Great and amazing feature #1</li>
+				 <li>Great and really amazing feature #2</li>
+				 <li>Great and amazing feature #3</li>
+				 <li>Great feature #4</li>
+				</ul>
+	  	        <div class="sync-w3-row sync-w3-padding-bottom">
+                 <a class="w3-btn sync-w3-round-xlarge sync-w3-white sync-w3-center sync-w3-text-red sync-w3-hover-red sync-w3-hover-text-white" href="#"><h2><strong>Subscribe</strong></h2></a>
+                </div>
+               </div>
+              </div>	
+             </div>
+            </div>
+		  </div>
+		 </div>		
+		</div>
+	  
+	    <div class="sync-w3-container sync-w3-third">	
+		 <div class="sync-w3-card-24 sync-w3-round-xlarge sync-w3-border sync-w3-center">
+		  <img src="img/pnd2.png" alt="Print + Digital" style="width:85%">
+		  <div class="sync-w3-container sync-w3-center sync-w3-text-dark-blue">
+		   <h5>Print + Digital Access</h5>
+		   <h5>$19.99 a month</h5>
+		    <div class="sync-w3-accordion sync-w3-white">		  
+             <div onclick="myFunction('Details2')" class="sync-w3-center sync-w3-white sync-w3-text-dark-blue"><h6><u>Plan details</u></h6></div>
+             <div id="Details2" class="sync-w3-accordion-content padding:10px 10px">
+	  	      <div class="sync-w3-row sync-w3-padding-bottom">
+               <div class="sync-w3-col sync-w3-text-dark-blue sync-w3-left-align" style="width:95%">
+			    <ul>
+				 <li>Great and amazing feature #1</li>
+				 <li>Great and really amazing feature #2</li>
+				 <li>Great and amazing feature #3</li>
+				 <li>Great feature #4</li>
+				</ul>
+	  	        <div class="sync-w3-row sync-w3-padding-bottom">
+                 <a class="w3-btn sync-w3-round-xlarge sync-w3-white sync-w3-center sync-w3-text-red sync-w3-hover-red sync-w3-hover-text-white" href="#"><h2><strong>Subscribe</strong></h2></a>
+                </div>				
+			   </div>
+              </div>	
+             </div>
+            </div>
+		  </div>
+		 </div>		
+		</div>
+	  
+	    <div class="sync-w3-container sync-w3-third">	
+		 <div class="sync-w3-card-24 sync-w3-round-xlarge sync-w3-border sync-w3-center">
+		  <img src="img/3d2.png" alt="Digital Trial" style="width:85%">
+		  <div class="sync-w3-container sync-w3-center sync-w3-text-dark-blue">
+		   <h5>Digital Only Trial</h5>
+		   <h5>99&cent; for 4 weeks*</h5>
+		    <div class="sync-w3-accordion sync-w3-white">		  
+             <div onclick="myFunction('Details3')" class="sync-w3-center sync-w3-white sync-w3-text-dark-blue"><h6><u>Plan details</u></h6></div>
+             <div id="Details3" class="sync-w3-accordion-content padding:10px 10px">
+	  	      <div class="sync-w3-row sync-w3-padding-bottom">
+               <div class="sync-w3-col sync-w3-text-dark-blue sync-w3-left-align" style="width:95%">
+			    <ul>
+				 <li>Great and amazing feature #1</li>
+				 <li>Great and really amazing feature #2</li>
+				 <li>Great and amazing feature #3</li>
+				 <li>Great feature #4</li>
+				</ul>
+	  	        <div class="sync-w3-row sync-w3-padding-bottom">
+                 <a class="w3-btn sync-w3-round-xlarge sync-w3-white sync-w3-center sync-w3-text-red sync-w3-hover-red sync-w3-hover-text-white" href="#"><h2><strong>Subscribe</strong></h2></a>
+                </div>
+			   </div>
+              </div>	
+             </div>
+            </div>
+		  </div>
+		 </div>		
+		</div>
+	  
+     </div>	
+	 
+    </div>		 
+
+    <div class="modal-footer sync-w3-white sync-w3-padding-24">
+	 <div class="sync-w3-row sync-w3-row-padding">
+      <div class="sync-w3-quarter">
+	  <!-- Intentionally blank left quarter of footer -->
+	   <p></p>
+      </div>
+      <div class="sync-w3-half">
+	   <div class="sync-w3-row">
+        <div class="sync-w3-half sync-w3-center">	
+		 <a href="#">Terms & Conditions</a>
+        </div>	
+        <div class="sync-w3-half sync-w3-center">	
+		 <a href="#">Privacy Policy</a>
+        </div>				
+       </div>
+	   <div class="sync-w3-row sync-w3-center">	
+	    <p>Powered by Syncronex&copy;</p>
+       </div>		   
+      </div>	  
+      <div class="sync-w3-quarter">
+	  <!-- Intentionally blank right quarter of footer -->	
+	   <p></p>	  
+	  </div>
+     </div>
+    </div>
+ </div> 
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+//span.onclick = function() {
+//    modal.style.display = "none";
+//}
+
+// When the user clicks anywhere outside of the modal, close it
+//window.onclick = function(event) {
+//    if (event.target == modal) {
+//        modal.style.display = "none";
+//    }
+//}
+
+// Accordian allows user to click a section of the footer to get the appropriate form with less clutter
+function myFunction(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("sync-w3-show") == -1) {
+        x.className += " sync-w3-show";
+    } else { 
+        x.className = x.className.replace(" sync-w3-show", "");
+    }
+}
+
+</script>
+
+
+</body>
+</html>
