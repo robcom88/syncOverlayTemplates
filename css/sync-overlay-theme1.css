@@ -4,3 +4,62 @@
     border: 1px solid rgb(91,155,213);
     box-shadow: 0 0 5px rgb(91,155,213), inset 0 0 5px rgb(91,155,213);
 }
+
+.sync-pm-bluegrad {
+    background: rgb(91, 155, 213); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left,rgba(91, 155, 213,1),rgba(91, 155, 213,.12)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(91, 155, 213,1),rgba(91, 155, 213,.12)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(91, 155, 213,1),rgba(91, 155, 213,.12)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(91, 155, 213,1), rgba(91, 155, 213,.12)); /*Standard*/
+}
+.sync-pm-alertContents {
+    
+    height: 100%;
+    padding: 10px;
+}
+
+.sync-pm-alertTitle,
+.sync-pm-alertTitle h1,
+.sync-pm-alertTitle h2,
+.sync-pm-alertTitle h3,
+.sync-pm-alertTitle h4,
+.sync-pm-alertTitle h5,
+.sync-pm-alertTitle h6 {
+    margin-top: inherit;
+    color: #ffffff;
+}
+
+.sync-pm-alertPlanRow {
+    /*row in the alert showing offer info*/
+}
+.sync-pm-alertPlanRow h1,.sync-pm-alertPlanRow h2,.sync-pm-alertPlanRow h3,
+.sync-pm-alertPlanRow h4,.sync-pm-alertPlanRow h5,.sync-pm-alertPlanRow h6 {
+    margin-top: 5px;
+    margin-bottom: 2px;
+}
+.sync-pm-alertSigninRow {
+    /*row in the alert holding all the signin CTA*/
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+a.sync-underline:hover,
+a.sync-underline:active,
+a.sync-underline:visited,
+a.sync-underline:default {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.sync-pm-alertSigninRowForm {
+    /* form for the sign in*/
+    display: none;
+}
+
+.sync-pm-alertPriceFont {
+    color: #ff0000;
+}
+.sync-pm-alertCopyrightRow {
+    /*row containing the 'powerd by' text*/
+    margin-top: 10px;
+    text-align: center;
+}

@@ -91,17 +91,6 @@ a.sync-boxClose:before {
     content: "\00d7"; /* &times; */
 }
 
-@media screen and (min-height: 400px) {
-/*    .syncronex-warning-overlay-container {
-        position: fixed;
-        left: 50%;
-        top: 50%;
-        width: 95%;
-        height: auto;
-        transform: translate(-50%, -50%);
-        border: 1px solid #333333;
-    }*/
-}
 @media screen and (min-height: 640px) and (min-width: 640px) {
     .syncronex-warning-overlay {
         display: none;
