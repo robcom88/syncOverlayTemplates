@@ -13,3 +13,10 @@ Use the template_framework.html file as a starting point.
 	Once it looks right, "tokenize" the variable elements of the overlay (copy, images, etc.)
 	
 	Compile the stylesheets into one via LESS
+
+	Create any Plan templates
+	
+	Get the templates loaded to admin tool
+		DB Script for new defaults?
+	
+	
