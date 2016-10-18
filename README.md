@@ -11,3 +11,5 @@ Use the template_framework.html file as a starting point.
 	Build the html within the <!-- template start -->/<!-- template end --> comments
 	
 	Once it looks right, "tokenize" the variable elements of the overlay (copy, images, etc.)
+	
+	Compile the stylesheets into one via LESS
