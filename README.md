@@ -15,6 +15,8 @@ Use the template_framework.html file as a starting point.
 	Compile the stylesheets into one via LESS
 
 	Create any Plan templates
+		This part is hard.  The html can be crafted/tuned in the framework but then must be 
+		extracted, encoded, and POSTED via API to get it in place
 	
 	Get the templates loaded to admin tool
 		DB Script for new defaults?
