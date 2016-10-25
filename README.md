@@ -18,8 +18,9 @@ Use the template_framework.html file as a starting point.
 		This part is hard.  The html can be crafted/tuned in the framework but then must be 
 		extracted, encoded (quotes and other JSON-specific chars escaped),
 		and POSTED via API to get it in place
+		(Or new Database Install Script)
 	
 	Get the templates loaded to admin tool
-		DB Script for new defaults?
+		DB Script for new defaults? Yes - See DefaultOverlayTemplate_Alert_Theme1.sql for example
 	
 	
