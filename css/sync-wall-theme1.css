@@ -1,4 +1,6 @@
-﻿
+﻿.sync-wall-cta {
+    font-size:0.90em;
+}
 .sync-wall-cta a{
     text-decoration: underline;
     color:inherit;
@@ -32,13 +34,36 @@
 
 .sync-wall-3Plan-plan-title-text{
     color:#002060;
-    font-size:1.25em;
+    font-weight:bold;
+}
+
+.sync-wall-3Plan-plan-details-link{
+    color:#002060;
+    text-decoration:underline;
+}
+
+.sync-wall-terms{
+    margin-top:20px;
+}
+
+.sync-wall-terms-link{
+    text-decoration: underline;
+    color:inherit;
+}
+
+.sync-wall-footer{
+    margin-top:10px;
+}
+
+.sync-wall-footer-text{
+    font-size:.5em;
 }
 
 @media (min-width: 769px){
     .sync-wall-3Plan-plan-container{
         box-shadow: 0 24px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
         margin-bottom:inherit;
-        height:186px;
+        height:auto;
+        min-height:206px;
     }
 }
