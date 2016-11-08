@@ -92,6 +92,31 @@ a.sync-boxClose:before {
     content: "\00d7"; /* &times; */
 }
 
+/* 
+    general support for the 'toggling' 
+    use a checkbox input type with class='sync-toggle'
+    followed immediately by a block element with class='sync-toggle-content'
+    then a <label> for the checkbox that is styled to look like a button, link, etc
+    to trigger the toggle.
+*/
+
+/* Content hidden until user clicks */
+.sync-toggle-content{
+    display:none;
+}
+input[type=checkbox].sync-toggle {
+    display:none;
+}
+/* display hiddent content if checkbox is checked*/
+input[type=checkbox].sync-toggle:checked + .sync-toggle-content {
+  display: block;
+}
+/* optional: use this to hide the toggler (button, etc.)*/
+input[type=checkbox].sync-toggle:checked ~ .sync-toggle-off {
+  display: none;
+}
+
+
 @media (min-height: 640px) and (min-width: 640px) {
     .syncronex-warning-overlay {
         display: none;
