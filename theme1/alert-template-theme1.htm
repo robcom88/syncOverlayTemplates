@@ -1,0 +1,39 @@
+<!-- Theme1 Alert Template -->
+<div class="sync-pm">
+    <div class="sync-pm-bluegrad sync-pm-alertContents container-fluid">
+        <div class="row sync-pm-alertTitle">
+            <div class="col-sm-12">
+                <h3><%progressIndicator%></h3>
+            </div>
+        </div>
+
+        <div class="row sync-pm-alertPlanRow">
+            <%planTemplate_alertTheme1_1%>
+        </div>
+        <div class="row sync-pm-alertSigninRow">
+            <div class="col-sm-12">
+                <span class="h4"><%existingAccountMessage%></span>
+            </div>
+        </div>
+        <div class="row sync-pm-alertSigninRow">
+            <div class="col-sm-12">
+                <form class="form-inline" id="saoverlayloginform">
+                    <div class="form-group">
+                        <input class="form-control saoverlayloginemail" placeholder="<%loginEmailPlaceholder%>" />
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control saoverlayloginpassword" type="password" placeholder="<%loginPasswordPlaceholder%>" />
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-info form-control" type="submit"><%loginButtonCaption%></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row sync-pm-alertCopyrightRow">
+            <div class="col-sm-12">
+                <small>Powered by Syncronex&copy;</small>
+            </div>
+        </div>
+    </div>
+</div>

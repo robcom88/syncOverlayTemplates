@@ -32,11 +32,21 @@
 .sync-pm-alertPlanRow {
     /*row in the alert showing offer info*/
 }
+.sync-pm-alertPlanRow a,
+.sync-pm-alertPlanRow a:hover,
+.sync-pm-alertPlanRow a:visited,
+.sync-pm-alertPlanRow a:active{
+    color:inherit;
+    cursor:pointer;
+    text-decoration: none;
+}
 .sync-pm-alertPlanRow h1,.sync-pm-alertPlanRow h2,.sync-pm-alertPlanRow h3,
 .sync-pm-alertPlanRow h4,.sync-pm-alertPlanRow h5,.sync-pm-alertPlanRow h6 {
     margin-top: 5px;
     margin-bottom: 2px;
 }
+
+
 .sync-pm-alertSigninRow {
     /*row in the alert holding all the signin CTA*/
     color: #ffffff;

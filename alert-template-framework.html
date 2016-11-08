@@ -10,10 +10,15 @@
     <!-- Leave this one. it is styling the dummy page -->
     <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css" />
 
-    <!-- include your stylesheets here-->
-    <link rel="stylesheet" href="css/overlayBase.css">
+    <!-- 
+        include your stylesheets here. When you have the template the 
+        way you want it, you'll want to compile any stylesheets into one
+        single CSS file that you reference in the Overlay Edit page in admin
+        (using a tool like LESS for instance)
+    -->
     <link rel="stylesheet" href="css/syncbootstrap.css">
-    <link rel="stylesheet" href="css/sync-overlay-theme1.css" />
+    <link rel="stylesheet" href="css/overlayBase.css">
+    <link rel="stylesheet" href="css/sync-alert-theme1.css" />
 </head>
 <body>
     <div class="container">
@@ -113,15 +118,101 @@
         <footer>
             <p>&copy; Syncronex, LLC 2016</p>
         </footer>
+        <!--
+            Using an embedded Sign-in Form?
+                include a <form> elememt with id of "saoverlayloginform"
+                include (at minimum) a username/email input box with a class of "saoverlayloginemail"
+                include (at minimum) a password input box with a class of "saoverlayloginpassword"
 
+                (you can have more than one of each. i.e., if you are handling a different layout 
+                 for a mobile view, using responsive techniques, etc.  Each username/email input must
+                 have the appropriate class and each password input must have the appropriate class)
+
+                include (at minimum) a submit button that triggers a form-submit.  Any other controls
+                (like a cancel/reset button, etc. are up to you)
+           
+        -->
         <div class="sync-pm">
             <div class="syncronex-warning-overlay"></div>
             <div id="syncronexOverlayContainer" class="syncronex-warning-overlay-container">
-            <div id="syncronexOverlayContent" class="syncronex-warning-overlay-content sync-pm-shadow">
+            <div id="syncronexOverlayContent" class="syncronex-warning-overlay-content">
                 <a class="sync-boxClose tablet-click" id="foo" data-sync-alert-close></a>
                 <!-- Overlay Template Snippet starts here -->
-                <div >
-                    <p>Alert Overlay Contents here</p>
+                <div class="sync-pm-bluegrad sync-pm-alertContents container-fluid">
+                    <div class="row sync-pm-alertTitle">
+                        <div class="col-sm-12">
+                            <h3>You have read 9 out of 10 Free Articles.</h3>
+                        </div>
+                    </div>
+
+                    <div class="row sync-pm-alertPlanRow">
+                        <!--    
+                                    Plan Templates
+                            You can draft the plan template here within the overlay template.
+                            once everything looks the way you want, you have to extract the
+                            plan part of the html out of here and deploy it to the system directly
+                            via api.
+                            In place of the HTML, this overlay template needs a special token
+                            to hold the template:
+                            
+                            <%planTemplate_{name}_{ordinal}%>
+
+                            where {name} is the plan Template identifier and {ordinal} is the 
+                            ordering of the plans that will get merged into the templates.
+
+                            I.e., the "First" plan/offer for an alert might be tokenized like this:
+
+                            <%planTemplate_AlertTheme1_1%>
+
+                            If there was a second plan to show on the overlay, it would be
+                            tokenized like this:
+
+                            <%planTemplate_AlertTheme1_2%>
+
+                            etc.
+
+                        -->
+                        <!-- Plan Template Start-->
+                        <!--<%planTemplate_alertTheme1_1%>-->
+                        <div class="col-sm-12">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <a href="#"><h3><strong>GET UNLIMITED ACCESS FOR ONLY <span class="sync-pm-alertPriceFont">99&cent;*</span></strong></h3></a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-offset-1 col-sm-11">
+                                    <small>*for the first 4 weeks then $9.99/mo</small>
+                                </div>
+                            </div>
+                        </div>
+                        <!--- Plan Template End -->
+                    </div>
+                    <div class="row sync-pm-alertSigninRow">
+                        <div class="col-sm-12">
+                            <span class="h4">Already have an account?</span>
+                        </div>
+                    </div>
+                    <div class="row sync-pm-alertSigninRow">
+                        <div class="col-sm-12">
+                            <form class="form-inline" id="saoverlayloginform">
+                                <div class="form-group">
+                                    <input class="form-control saoverlayloginemail" placeholder="Email"/>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-control saoverlayloginpassword" type="password" placeholder="Password"/>
+                                </div>
+                                <div class="form-group">
+                                    <button class="btn btn-info form-control" type="submit">Log in</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row sync-pm-alertCopyrightRow">
+                        <div class="col-sm-12">
+                            <small>Powered by Syncronex&copy;</small>
+                        </div>
+                    </div>
                 </div>
                 <!-- Overlay Snippet ends here -->
             </div>
