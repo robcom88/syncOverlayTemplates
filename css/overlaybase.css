@@ -2,6 +2,15 @@
     Base style for overlay (modal popup and nag behavior)
 */
 
+/* Prevent user from scrolling the overlay off the screen*/
+body {
+    overflow: hidden;
+}
+p:not(.sync-pm),
+section:not(.sync-pm),
+article:not(.sync-pm) {
+    visibility: hidden;
+}
 
 /*Sets the black-out styling behind the modal popup*/
 .syncronex-wall-overlay {
@@ -11,11 +20,10 @@
     top:0;
     width:100%;
     height:100%;
-    z-index:2147483647;
+    z-index:2147483645;
     background-color:#313131;
     opacity:.95;
     filter:alpha(opacity=95);
-    opacity:.95
 }
 
 /* provides the centering container for the actual modal */
@@ -26,8 +34,8 @@
     left: 0;
     height: 100%;
     width: 100%;
-    z-index: 2147483647;
-    overflow-y: scroll; /* allow the overlay to be scrolled if it's too big for screen */
+    z-index: 2147483646;
+        overflow-y: scroll; /* allow the overlay to be scrolled if it's too big for screen */
 }
 
 /* Styles the actual modal */
@@ -37,7 +45,7 @@
     top: 2%;
     left: 5%;
     width: 90%;
-    background-color: #ffffff;
+    background-color: #fff;
     padding:10px;
     z-index: 2147483647;
 }
@@ -141,7 +149,7 @@ input[type=checkbox].sync-toggle:checked ~ .sync-toggle-off {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 992px) {
     .syncronex-wall-overlay-content {
         top:50%;
         left: 50%;

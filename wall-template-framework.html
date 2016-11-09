@@ -115,14 +115,15 @@
     </footer>
 </div>
 
-        <div id="syncronexOverlay" class="syncronex-wall-overlay">
+<div id="syncronexOverlay" class="syncronex-wall-overlay"></div>
+
             <div id="syncronexOverlayContainer" class="syncronex-wall-overlay-container">
                 <div id="syncronexOverlayContent" class="syncronex-wall-overlay-content">
                     <!-- Overlay Template Snippet starts here -->
                     <div class="sync-pm container-fluid">
                         <!-- mobile login content hidden until user toggles-->
                         <input id="mobile-login-toggle" type="checkbox" class="sync-toggle" />
-                        <div id="loginForm" class="sync-toggle-content">
+                        <div id="mobileloginForm" class="sync-toggle-content">
                             <div class="row">
                                 <div class="col-md-6 sync-wall-header-logo">
                                     <img alt="logo" src="img/ACMENewsLogo.png"/>
@@ -130,7 +131,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <p>Existing subscribers can sign in below.</p>
+                                    <p class="sync-pm">Existing subscribers can sign in below.</p>
                                     <form class="form-inline" id="saoverlayloginform" autocomplete="off">
                                         <div class="form-group">
                                             <input class="form-control saoverlayloginemail" placeholder="Email" type="email">
@@ -141,13 +142,16 @@
                                         <div class="form-group">
                                             <button class="btn btn-primary form-control" type="submit">Log in</button>
                                         </div>
+                                        <div class="form-group">
+                                            <a href="#">Forgot Password?</a>
+                                        </div>
                                     </form>
 
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-xs-12">
-                                    <p>If you are a print subscriber but have not created an account yet, click the button below to get started! </p>
+                                    <p class="sync-pm">If you are a print subscriber but have not created an account yet, click the button below to get started! </p>
                                     <form class="form-inline">
                                         <div class="form-group">
                                             <a id="activate" class="btn btn-info form-control" src="#">
@@ -172,21 +176,42 @@
                         </div>
                         <!-- end mobile login content -->
 
-                        <!-- header and logon cta-->
+                       <!-- header and logon cta-->
                         <div class="row sync-toggle-off">
-                            <div class="col-md-6 sync-wall-header-logo">
+                            <div class="col-sm-6 sync-wall-header-logo">
                                 <img alt="logo" src="img/ACMENewsLogo.png"/>
                             </div>
 
-                            <div class="col-md-6 sync-wall-cta hidden-xs">
-                                <p>Already a subscriber? <a href="#">Log in</a>
+                            <div class="col-sm-6 sync-wall-cta hidden-xs">
+                                <p class="sync-pm">
+                                    Already a subscriber?
+                                    <label for="desktop-login-toggle">Log in</label>
                                 </p>
-                                <p>Have a print subscription? <a href="#">Activate</a>
+                                <input type="checkbox" id="desktop-login-toggle" class="sync-toggle"/>
+                                <div id="desktop-login-form" class="sync-toggle-content">
+                                    <form class="form" id="saoverlayloginform" autocomplete="off">
+                                        <div class="form-group">
+                                            <input class="form-control saoverlayloginemail" placeholder="Email" type="email">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control saoverlayloginpassword" type="password" placeholder="Password">
+                                        </div>
+                                        <div class="form-group">
+                                            <button class="btn btn-primary form-control" type="submit">Log in</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <a href="#">Forgot Password?</a>
+                                        </div>
+                                    </form>
+                                </div>
+                                <p class="sync-pm">
+                                    Have a print subscription? <a href="#">Activate</a>
                                 </p>
                             </div>
                             <div class="col-xs-12 sync-wall-cta text-center sync-desktop-hidden">
-                                <p>Already a subscriber?</p>
-                                <p><label id="mobile-login-form-toggle-btn" for="mobile-login-toggle">Click Here</label>
+                                <p class="sync-pm">Already a subscriber?</p>
+                                <p class="sync-pm">
+                                    <label id="mobile-login-form-toggle-btn" for="mobile-login-toggle">Click Here</label>
                                 </p>
                             </div>
 
@@ -201,7 +226,7 @@
                         <div class="row sync-toggle-off">
                             <div class="col-xs-12">
                                 <div class="sync-wall-header2 text-center">
-                                    <p class="sync-wall-header2-text">You have read your 10 free articles for the month. Select a plan below to start your subscription today.</p>
+                                    <p class="sync-wall-header2-text sync-pm">You have read your 10 free articles for the month. Select a plan below to start your subscription today.</p>
                                 </div>
                             </div>
                         </div>
@@ -216,7 +241,19 @@
                                         <span class="sync-wall-3Plan-plan-title-text">Digital Only Access $9.99/month</span>
                                     </div>
                                     <div class="sync-wall-3Plan-plan-details">
-                                        <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
+                                        <label id="plan-details-toggle-btn-1" for="plan-details-toggle-1" class="sync-toggle">
+                                            <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
+                                        </label>
+                                    </div>
+                                    <input type="checkbox" id="plan-details-toggle-1" class="sync-toggle"/>
+                                    <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
+                                        <ul class="text-left">
+                                            <li>Great and amazing feature #1</li>
+                                            <li>Great and really amazing feature #2</li>
+                                            <li>Great and amazing feature #3</li>
+                                            <li>Great feature #4</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
                                     </div>
                                 </div>
                                 <!-- end plan template -->
@@ -229,7 +266,19 @@
                                         <span class="sync-wall-3Plan-plan-title-text">Print + Digital Access $19.99/month</span>
                                     </div>
                                     <div class="sync-wall-3Plan-plan-details">
-                                        <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
+                                        <label id="plan-details-toggle-btn-2" for="plan-details-toggle-2" class="sync-toggle">
+                                            <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
+                                        </label>
+                                    </div>
+                                    <input type="checkbox" id="plan-details-toggle-2" class="sync-toggle" />
+                                    <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
+                                        <ul class="text-left">
+                                            <li>Great and amazing feature #1</li>
+                                            <li>Great and really amazing feature #2</li>
+                                            <li>Great and amazing feature #3</li>
+                                            <li>Great feature #4</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
                                     </div>
 
                                 </div>
@@ -243,7 +292,19 @@
                                         <span class="sync-wall-3Plan-plan-title-text">Digital Only Trial 99&cent; for 4 weeks*</span>
                                     </div>
                                     <div class="sync-wall-3Plan-plan-details">
-                                        <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
+                                        <label id="plan-details-toggle-btn-3" for="plan-details-toggle-3" class="sync-toggle">
+                                            <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
+                                        </label>
+                                    </div>
+                                    <input type="checkbox" id="plan-details-toggle-3" class="sync-toggle" />
+                                    <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
+                                        <ul class="text-left">
+                                            <li>Great and amazing feature #1</li>
+                                            <li>Great and really amazing feature #2</li>
+                                            <li>Great and amazing feature #3</li>
+                                            <li>Great feature #4</li>
+                                        </ul>
+                                        <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
                                     </div>
 
                                 </div>
@@ -270,6 +331,6 @@
                     <!-- Overlay Snippet ends here -->
                 </div>
             </div>
-        </div>
+
 </body>
 </html>

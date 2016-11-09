@@ -34,6 +34,7 @@ input[type=checkbox]#mobile-login-toggle:checked .sync-toggle-off{
     border: 1px solid #ccc;
     border-radius:16px;
     margin-bottom:10px;
+    padding-bottom:10px;
 }
 
 .sync-wall-3Plan-plan-container img{
@@ -49,6 +50,12 @@ input[type=checkbox]#mobile-login-toggle:checked .sync-toggle-off{
 .sync-wall-3Plan-plan-details-link{
     color:#002060;
     text-decoration:underline;
+}
+
+.sync-wall-3Plan-plan-details-callout li{
+    margin-left:-10px;
+    font-size:.75em;
+    color:#002060;
 }
 
 .sync-wall-terms{
@@ -68,7 +75,7 @@ input[type=checkbox]#mobile-login-toggle:checked .sync-toggle-off{
     font-size:.5em;
 }
 
-@media (min-width: 769px){
+@media (min-width: 768px){
     .sync-desktop-hidden{
         display:none;
     }
@@ -83,10 +90,13 @@ input[type=checkbox]#mobile-login-toggle:checked .sync-toggle-off{
         color:inherit;
     }
 
+}
+@media(min-width:992px) {
     .sync-wall-3Plan-plan-container{
         box-shadow: 0 24px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);
         margin-bottom:inherit;
         height:auto;
         min-height:206px;
     }
+
 }
