@@ -1,0 +1,146 @@
+<div class="sync-pm container-fluid">
+<!-- mobile login content hidden until user toggles-->
+<input type="hidden" value="<%urlBase%>"/>
+    <input id="mobile-login-toggle" type="checkbox" class="sync-toggle" />
+    <div id="mobileloginForm" class="sync-toggle-content">
+        <div class="row">
+            <div class="col-md-6 sync-wall-header-logo">
+                <img alt="logo" src="<%LogoImgLink%>" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="sync-pm"><%ExistingSubscribersPrompt%></p>
+                <form class="form-inline" id="saoverlayloginform" autocomplete="off">
+                    <div class="form-group">
+                        <input class="form-control saoverlayloginemail" placeholder="<%EmailPlaceholderText%>" type="email">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control saoverlayloginpassword" type="password" placeholder="<%PasswordPlaceHolderText%>">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary form-control" type="submit"><%LoginButtonText%></button>
+                    </div>
+                    <div class="form-group">
+                        <a href="<%ForgotPasswordLink%>"><%ForgotPasswordLinkText%></a>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <p class="sync-pm"><%ActivationPrompt%></p>
+                <form class="form-inline">
+                    <div class="form-group">
+                        <a id="activate" class="btn btn-info form-control" src="<%ActivationLink%>">
+                            <span class="sync-wall-mobile-login-btn-text tablet-click"><%ActivationLinkText%></span>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <form class="form-inline">
+                    <div class="form-group">
+                        <label id="cancelBtn" class="btn btn-default form-control sync-toggle" for="mobile-login-toggle">
+                            <span class="sync-wall-mobile-login-btn-text tablet-click"><%LoginPageCancelButtonText%></span>
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end mobile login content -->
+    <!-- header and logon cta-->
+    <div class="row sync-toggle-off">
+        <div class="col-sm-6 sync-wall-header-logo">
+            <img alt="logo" src="<%LogoImgLink%>" />
+        </div>
+
+        <div class="col-sm-6 sync-wall-cta hidden-xs">
+            <p class="sync-pm">
+                <%ExistingSubscriberDesktopPrompt%>
+                <label for="desktop-login-toggle"><%LoginFormLinkText%></label>
+            </p>
+            <input type="checkbox" id="desktop-login-toggle" class="sync-toggle" />
+            <div id="desktop-login-form" class="sync-toggle-content">
+                <form class="form" id="saoverlayloginform" autocomplete="off">
+                    <div class="form-group">
+                        <input class="form-control saoverlayloginemail" placeholder="<%EmailPlaceholderText%>" type="email">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control saoverlayloginpassword" type="password" placeholder="<%PasswordPlaceholderText%>">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary form-control" type="submit"><%LoginButtonText%></button>
+                    </div>
+                    <div class="form-group">
+                        <a href="<%ForgotPasswordLink%>"><%ForgotPasswordLinkText%></a>
+                    </div>
+                </form>
+            </div>
+            <p class="sync-pm">
+                <%HaveAPrintSubscriptionPrompt%> <a href="<%ActivationLink%>"><%ActivationLinkText%></a>
+            </p>
+        </div>
+        <div class="col-xs-12 sync-wall-cta text-center sync-desktop-hidden">
+            <p class="sync-pm"><%ExistingSubscriberMobilePrompt%></p>
+            <p class="sync-pm">
+                <label id="mobile-login-form-toggle-btn" for="mobile-login-toggle"><%MobileLoginFormLinkText%></label>
+            </p>
+        </div>
+
+    </div>
+    <div class="row sync-toggle-off">
+        <div class="col-xs-12">
+            <div class="sync-wall-header1 text-center">
+                <span class="sync-wall-header1-text"><%NewSubscriberPrompt%></span>
+            </div>
+        </div>
+    </div>
+    <div class="row sync-toggle-off">
+        <div class="col-xs-12">
+            <div class="sync-wall-header2 text-center">
+                <p class="sync-wall-header2-text sync-pm"><%NewSubscriberMessageText%></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- plan list here-->
+    <div class="row sync-wall-plan-list sync-toggle-off">
+        <div class="col-md-4">
+            <!-- plan template 1st here-->
+            <%planTemplate_wallTheme1Legacy_1%>
+            <!-- end plan template -->
+        </div>
+        <div class="col-md-4">
+            <!-- plan template 2nd here-->
+            <%planTemplate_wallTheme1Legacy_2%>
+            <!-- end plan template -->
+        </div>
+        <div class="col-md-4">
+            <!-- plan template 3rd here-->
+            <%planTemplate_wallTheme1Legacy_3%>
+            <!-- end plan template -->
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 sync-wall-terms text-center">
+            <a class="sync-wall-terms-link" href="<%TermsAndConditionsLink%>"><%TermsAndConditionsLinkText%></a>
+            &nbsp;
+            &nbsp;
+            <a class="sync-wall-terms-link" href="<%PrivacyPolicyLink%>"><%PrivacyPolicyLinkText%></a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 sync-wall-footer text-center">
+            <span class="sync-wall-footer-text">Powered by Syncronex&copy;</span>
+        </div>
+    </div>
+
+</div>
