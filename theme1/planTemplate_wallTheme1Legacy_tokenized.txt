@@ -4,13 +4,13 @@
         <span class="sync-wall-3Plan-plan-title-text"><%Plan_Title%></span>
     </div>
     <div class="sync-wall-3Plan-plan-details">
-        <label id="plan-details-toggle-btn-1" for="plan-details-toggle-1" class="sync-toggle">
+        <label id="plan-details-toggle-btn-<%Plan_Id%>" for="plan-details-toggle-<%Plan_Id%>" class="sync-toggle">
             <span class="sync-wall-3Plan-plan-details-link"><%PlanDetailsLinkText%></span>
         </label>
     </div>
-    <input type="checkbox" id="plan-details-toggle-1" class="sync-toggle"/>
+    <input type="checkbox" id="plan-details-toggle-<%Plan_Id%>" class="sync-toggle"/>
     <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
-		<%Plan_Details%>
+		<%Plan_Description%>
         <a href="<%urlBase%>/account/availablesubscriptions?planFilter=<%Plan_Id%>&returnUrl=<%returnUrl%>&cancelUrl=<%cancelUrl%>&op=subscribe" class="btn btn-info btn-sm sync-wall-plan-details-button"><%PlanSubscribeButtonText%></a>
     </div>
 </div>

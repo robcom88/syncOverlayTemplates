@@ -1,6 +1,8 @@
 <div class="sync-pm container-fluid">
-<!-- mobile login content hidden until user toggles-->
-<input type="hidden" value="<%urlBase%>"/>
+    <!-- mobile login content hidden until user toggles-->
+    <input type="hidden" value="<%urlBase%>" />
+    <input type="hidden" value="<%planDetailsLinkText%>" />
+    <input type="hidden" value="<%PlanSubscribeButtonText%>" />
     <input id="mobile-login-toggle" type="checkbox" class="sync-toggle" />
     <div id="mobileloginForm" class="sync-toggle-content">
         <div class="row">
@@ -8,16 +10,20 @@
                 <img alt="logo" src="<%LogoImgLink%>" />
             </div>
         </div>
-        <div class="row">
+        <div class="row sync-logged-in-hidden">
             <div class="col-xs-12">
-                <p class="sync-pm"><%ExistingSubscribersPrompt%></p>
-                <form class="form-inline" id="saoverlayloginform" autocomplete="off">
+                <p class="sync-pm"><%ExistingSubscribersMsg%></p>
+                <form class="form-inline sync-overlay-login-form" autocomplete="off">
                     <div class="form-group">
-                        <input class="form-control saoverlayloginemail" placeholder="<%EmailPlaceholderText%>" type="email">
+                        <input class="form-control sync-overlay-login-username" placeholder="<%EmailPlaceholderText%>" type="email">
                     </div>
                     <div class="form-group">
-                        <input class="form-control saoverlayloginpassword" type="password" placeholder="<%PasswordPlaceHolderText%>">
+                        <input class="form-control sync-overlay-login-password" type="password" placeholder="<%PasswordPlaceHolderText%>">
                     </div>
+                    <div class="form-group sync-overlay-login-error has-error">
+                        <span class="help-block"><%InvalidLoginMessage%></span>
+                    </div>
+
                     <div class="form-group">
                         <button class="btn btn-primary form-control" type="submit"><%LoginButtonText%></button>
                     </div>
@@ -25,7 +31,11 @@
                         <a href="<%ForgotPasswordLink%>"><%ForgotPasswordLinkText%></a>
                     </div>
                 </form>
-
+            </div>
+        </div>
+        <div class="row sync-logged-in-visible">
+            <div class="col-xs-12">
+                <div class="sync-pm alert alert-warning"><%LoggedInNonSubscriberMsgMobile%></div>
             </div>
         </div>
         <div class="row">
@@ -33,7 +43,7 @@
                 <p class="sync-pm"><%ActivationPrompt%></p>
                 <form class="form-inline">
                     <div class="form-group">
-                        <a id="activate" class="btn btn-info form-control" src="<%ActivationLink%>">
+                        <a id="activate" class="btn btn-info form-control" href="<%ActivationLink%>?returnUrl=<%returnUrl%>&cancelUrl=<%cancelUrl%>&op=link">
                             <span class="sync-wall-mobile-login-btn-text tablet-click"><%ActivationLinkText%></span>
                         </a>
                     </div>
@@ -46,7 +56,8 @@
                 <form class="form-inline">
                     <div class="form-group">
                         <label id="cancelBtn" class="btn btn-default form-control sync-toggle" for="mobile-login-toggle">
-                            <span class="sync-wall-mobile-login-btn-text tablet-click"><%LoginPageCancelButtonText%></span>
+                            <span class="sync-wall-mobile-login-btn-text tablet-click sync-logged-in-hidden"><%LoginPageCancelButtonText%></span>
+                            <span class="sync-wall-mobile-login-btn-text tablet-click sync-logged-in-visible"><%LoginPageOptionsButtonText%></span>
                         </label>
                     </div>
                 </form>
@@ -61,29 +72,37 @@
         </div>
 
         <div class="col-sm-6 sync-wall-cta hidden-xs">
-            <p class="sync-pm">
-                <%ExistingSubscriberDesktopPrompt%>
-                <label for="desktop-login-toggle"><%LoginFormLinkText%></label>
-            </p>
-            <input type="checkbox" id="desktop-login-toggle" class="sync-toggle" />
-            <div id="desktop-login-form" class="sync-toggle-content">
-                <form class="form" id="saoverlayloginform" autocomplete="off">
-                    <div class="form-group">
-                        <input class="form-control saoverlayloginemail" placeholder="<%EmailPlaceholderText%>" type="email">
-                    </div>
-                    <div class="form-group">
-                        <input class="form-control saoverlayloginpassword" type="password" placeholder="<%PasswordPlaceholderText%>">
-                    </div>
-                    <div class="form-group">
-                        <button class="btn btn-primary form-control" type="submit"><%LoginButtonText%></button>
-                    </div>
-                    <div class="form-group">
-                        <a href="<%ForgotPasswordLink%>"><%ForgotPasswordLinkText%></a>
-                    </div>
-                </form>
+            <div class="sync-logged-in-hidden">
+                <p class="sync-pm">
+                    <%ExistingSubscriberDesktopPrompt%>
+                    <label for="desktop-login-toggle"><%LoginFormLinkText%></label>
+                </p>
+                <input type="checkbox" id="desktop-login-toggle" class="sync-toggle" />
+                <div id="desktop-login-form" class="sync-toggle-content">
+                    <form class="form sync-overlay-login-form" autocomplete="off">
+                        <div class="form-group">
+                            <input class="form-control sync-overlay-login-username" placeholder="<%EmailPlaceholderText%>" type="email">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control sync-overlay-login-password" type="password" placeholder="<%PasswordPlaceholderText%>">
+                        </div>
+                        <div class="form-group sync-overlay-login-error has-error">
+                            <span class="help-block"><%InvalidLoginMessage%></span>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-primary form-control" type="submit"><%LoginButtonText%></button>
+                        </div>
+                        <div class="form-group">
+                            <a href="<%ForgotPasswordLink%>"><%ForgotPasswordLinkText%></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="sync-logged-in-visible">
+                <div class="sync-pm alert alert-warning"><%LoggedInNonSubscriberMsgDesktop%></div>
             </div>
             <p class="sync-pm">
-                <%HaveAPrintSubscriptionPrompt%> <a href="<%ActivationLink%>"><%ActivationLinkText%></a>
+                <%HaveAPrintSubscriptionPrompt%> <a href="<%ActivationLink%>?returnUrl=<%returnUrl%>&cancelUrl=<%cancelUrl%>&op=link"><%ActivationLinkText%></a>
             </p>
         </div>
         <div class="col-xs-12 sync-wall-cta text-center sync-desktop-hidden">

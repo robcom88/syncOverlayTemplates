@@ -48,6 +48,7 @@ article:not(.sync-pm) {
     background-color: #fff;
     padding:10px;
     z-index: 2147483647;
+    box-sizing: border-box;
 }
 
 .syncronex-warning-overlay {
