@@ -52,6 +52,10 @@ input[type=checkbox]#mobile-login-toggle:checked .sync-toggle-off{
     text-decoration:underline;
 }
 
+.sync-wall-3Plan-plan-details-callout ul {
+    text-align: left;
+}
+
 .sync-wall-3Plan-plan-details-callout li{
     margin-left:-10px;
     font-size:.75em;
