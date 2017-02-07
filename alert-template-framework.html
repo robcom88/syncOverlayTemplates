@@ -16,9 +16,14 @@
         single CSS file that you reference in the Overlay Edit page in admin
         (using a tool like LESS for instance)
     -->
-    <link rel="stylesheet" href="css/syncbootstrap.css">
+    <!--<link rel="stylesheet" href="css/syncbootstrap.css">
     <link rel="stylesheet" href="css/overlayBase.css">
-    <link rel="stylesheet" href="css/sync-alert-theme1.css" />
+    <link rel="stylesheet" href="css/sync-alert-theme1.css" />-->
+    
+    
+    <link rel="stylesheet" href="https://az829701.vo.msecnd.net/css/sync-theme1-alert.css" />
+    <!--<link rel="stylesheet" href="https://az833833.vo.msecnd.net/css/sync-theme1-alert.min.css" />-->
+    <!--<link rel="stylesheet" href="css/sync-theme1-alert2.css" />-->
 </head>
 <body>
     <div class="container">
@@ -132,92 +137,89 @@
                 (like a cancel/reset button, etc. are up to you)
            
         -->
-        <div class="sync-pm">
+
             <div class="syncronex-warning-overlay"></div>
             <div id="syncronexOverlayContainer" class="syncronex-warning-overlay-container">
             <div id="syncronexOverlayContent" class="syncronex-warning-overlay-content">
                 <a class="sync-boxClose tablet-click" id="foo" data-sync-alert-close></a>
                 <!-- Overlay Template Snippet starts here -->
-                <div class="sync-pm-bluegrad sync-pm-alertContents container-fluid">
-                    <div class="row sync-pm-alertTitle">
-                        <div class="col-sm-12">
-                            <h3>You have read 9 out of 10 Free Articles.</h3>
+                <!-- Theme1 Alert Template -->
+                <div class="sync-pm">
+                    <input type="hidden" value="<%urlBase%>" />
+                    <a class="sync-box-close tablet-click" data-sync-alert-close></a>
+                    <div class="sync-pm-bluegrad sync-pm-alertContents container-fluid">
+                        <div class="row sync-pm-alertTitle">
+                            <div class="col-sm-12">
+                                <h3><%progressIndicator%></h3>
+                            </div>
                         </div>
-                    </div>
-
-                    <div class="row sync-pm-alertPlanRow">
-                        <!--    
-                                    Plan Templates
-                            You can draft the plan template here within the overlay template.
-                            once everything looks the way you want, you have to extract the
-                            plan part of the html out of here and deploy it to the system directly
-                            via api.
-                            In place of the HTML, this overlay template needs a special token
-                            to hold the template:
-                            
-                            <%planTemplate_{name}_{ordinal}%>
-
-                            where {name} is the plan Template identifier and {ordinal} is the 
-                            ordering of the plans that will get merged into the templates.
-
-                            I.e., the "First" plan/offer for an alert might be tokenized like this:
-
-                            <%planTemplate_AlertTheme1_1%>
-
-                            If there was a second plan to show on the overlay, it would be
-                            tokenized like this:
-
-                            <%planTemplate_AlertTheme1_2%>
-
-                            etc.
-
-                        -->
-                        <!-- Plan Template Start-->
-                        <!--<%planTemplate_alertTheme1_1%>-->
-                        <div class="col-sm-12">
-                            <div class="row">
+                        <div class="row sync-pm-alertPlanRow">
+                            <%planTemplate_syncTheme1AlertLegacy_1%>
+                        </div>
+                        <!-- login form -->
+                        <div class="row sync-pm-alertSigninRow sync-logged-in-hidden sync-toggle">
+                            <div class="col-sm-12">
+                                <label for="sync-login-toggle">
+                                    <span class="h5 sync-underline"><%existingAccountMessage%></span>
+                                </label>
+                            </div>
+                        </div>
+                        <input id="sync-login-toggle" type="checkbox" class="sync-toggle" />
+                        <div id="syn-login-form" class="sync-toggle-content">
+                            <div class="row sync-pm-alertSigninRow sync-logged-in-hidden">
                                 <div class="col-sm-12">
-                                    <a href="#"><h3><strong>GET UNLIMITED ACCESS FOR ONLY <span class="sync-pm-alertPriceFont">99&cent;*</span></strong></h3></a>
+                                    <form class="form-inline sync-overlay-login-form">
+                                        <fieldset>
+                                            <div class="form-group">
+                                                <input class="form-control sync-overlay-login-username" type="email" placeholder="<%loginEmailPlaceholder%>" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control sync-overlay-login-password" type="password" placeholder="<%loginPasswordPlaceholder%>" />
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-info form-control" type="submit"><%loginButtonCaption%></button>
+                                            </div>
+                                        </fieldset>
+                                        <fieldset>
+                                            <div class="form-group sync-overlay-login-error col-sm-12">
+                                                <div class="alert alert-danger">
+                                                    <p><%invalidLoginMessage%></p>
+                                                    <a href="<%ForgotPasswordLink%>" class="tablet-click"><span class="h6"><%ForgotPasswordLinkText%></span></a>
+                                                </div>
+                                            </div>
+                                        </fieldset>
+                                    </form>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-sm-offset-1 col-sm-11">
-                                    <small>*for the first 4 weeks then $9.99/mo</small>
+                            <div class="row sync-pm-alertSigninRow">
+                                <div class="col-sm-12">
+                                    <span class="h5"><%ExistingPrintSubscriptionPrompt%> </span><a href="<%ActivateLink%>" class="tablet-click"><%ActivateLinkText%></a>
                                 </div>
                             </div>
                         </div>
-                        <!--- Plan Template End -->
-                    </div>
-                    <div class="row sync-pm-alertSigninRow">
-                        <div class="col-sm-12">
-                            <span class="h4">Already have an account?</span>
+                        <div class="sync-logged-in-visible">
+                            <div class="row sync-pm-alertSigninRow sync-logged-in-visible">
+                                <div class="col-sm-12">
+                                    <div class="alert alert-info">
+                                        <p>
+                                            <%SignedInNonSubscriberMessage%>
+                                        </p>
+                                        <a href="<%ActivateLink%>" class="alert-link tablet-click"><%SignedInUserNonSubscriberActivationLinkText%></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end login form-->
+                        <div class="row sync-pm-alertCopyrightRow">
+                            <div class="col-sm-12">
+                                <span class="sync-alert-copyright-text">Powered by Syncronex&copy;</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="row sync-pm-alertSigninRow">
-                        <div class="col-sm-12">
-                            <form class="form-inline" id="saoverlayloginform">
-                                <div class="form-group">
-                                    <input class="form-control saoverlayloginemail" placeholder="Email"/>
-                                </div>
-                                <div class="form-group">
-                                    <input class="form-control saoverlayloginpassword" type="password" placeholder="Password"/>
-                                </div>
-                                <div class="form-group">
-                                    <button class="btn btn-info form-control" type="submit">Log in</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="row sync-pm-alertCopyrightRow">
-                        <div class="col-sm-12">
-                            <small>Powered by Syncronex&copy;</small>
-                        </div>
-                    </div>
-                </div>
-                <!-- Overlay Snippet ends here -->
+                </div>                <!-- Overlay Snippet ends here -->
             </div>
             </div>
         </div>
-    </div>
+
 </body>
 </html>

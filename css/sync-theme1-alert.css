@@ -6784,6 +6784,15 @@
 /*
     Base style for overlay (modal popup and nag behavior)
 */
+/* Prevent user from scrolling the overlay off the screen*/
+body {
+  overflow: hidden;
+}
+p:not(.sync-pm),
+section:not(.sync-pm),
+article:not(.sync-pm) {
+  visibility: hidden;
+}
 /*Sets the black-out styling behind the modal popup*/
 .syncronex-wall-overlay {
   visibility: visible;
@@ -6792,11 +6801,10 @@
   top: 0;
   width: 100%;
   height: 100%;
-  z-index: 2147483647;
+  z-index: 2147483645;
   background-color: #313131;
   opacity: .95;
   filter: alpha(opacity=95);
-  opacity: 0.95;
 }
 /* provides the centering container for the actual modal */
 .syncronex-wall-overlay-container {
@@ -6806,19 +6814,21 @@
   left: 0;
   height: 100%;
   width: 100%;
-  z-index: 2147483647;
+  z-index: 2147483646;
+  overflow-y: scroll;
+  /* allow the overlay to be scrolled if it's too big for screen */
 }
 /* Styles the actual modal */
 .syncronex-wall-overlay-content {
   visibility: visible;
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #ffffff;
-  border: 5px solid #ddd;
+  top: 2%;
+  left: 5%;
+  width: 90%;
+  background-color: #fff;
   padding: 10px;
   z-index: 2147483647;
+  box-sizing: border-box;
 }
 .syncronex-warning-overlay {
   visibility: visible;
@@ -6868,6 +6878,28 @@ a.sync-boxClose:before {
   content: "\00d7";
   /* &times; */
 }
+/* 
+    general support for the 'toggling' 
+    use a checkbox input type with class='sync-toggle'
+    followed immediately by a block element with class='sync-toggle-content'
+    then a <label> for the checkbox that is styled to look like a button, link, etc
+    to trigger the toggle.
+*/
+/* Content hidden until user clicks */
+.sync-toggle-content {
+  display: none;
+}
+input[type=checkbox].sync-toggle {
+  display: none;
+}
+/* display hiddent content if checkbox is checked*/
+input[type=checkbox].sync-toggle:checked + .sync-toggle-content {
+  display: block;
+}
+/* optional: use this to hide the toggler (button, etc.)*/
+input[type=checkbox].sync-toggle:checked ~ .sync-toggle-off {
+  display: none;
+}
 @media (min-height: 640px) and (min-width: 640px) {
   .syncronex-warning-overlay {
     display: none;
@@ -6886,6 +6918,14 @@ a.sync-boxClose:before {
   a.sync-boxClose {
     margin-top: -12px;
     margin-right: -12px;
+  }
+}
+@media (min-width: 992px) {
+  .syncronex-wall-overlay-content {
+    top: 50%;
+    left: 50%;
+    width: auto;
+    transform: translate(-50%, -50%);
   }
 }
 /* Creates a fuzzy inset border around the div*/
