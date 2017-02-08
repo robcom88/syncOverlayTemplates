@@ -6854,7 +6854,7 @@ body {
   z-index: 2147483647;
 }
 /* Base 'close' button for alerts*/
-a.sync-boxClose {
+a.sync-box-close {
   float: right;
   margin-top: 0;
   margin-right: 0;
@@ -6869,7 +6869,7 @@ a.sync-boxClose {
   line-height: 0;
   padding: 11px 3px;
 }
-a.sync-boxClose:before {
+a.sync-box-close:before {
   content: "\00d7";
   /* &times; */
 }
@@ -6913,7 +6913,7 @@ input[type=checkbox].sync-toggle:checked ~ .sync-toggle-off {
   .syncronex-warning-overlay-content {
     box-shadow: 5px 5px 5px #333333;
   }
-  a.sync-boxClose {
+  a.sync-box-close {
     margin-top: -12px;
     margin-right: -12px;
   }
