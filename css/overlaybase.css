@@ -67,6 +67,10 @@ body {
     z-index: 2147483647;
 }
 
+.sync-underline {
+    text-decoration: underline;
+}
+
 .sync-pm-shadow {
     box-shadow: none;
 }
