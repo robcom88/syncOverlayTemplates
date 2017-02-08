@@ -6788,11 +6788,6 @@
 body {
   overflow: hidden;
 }
-p:not(.sync-pm),
-section:not(.sync-pm),
-article:not(.sync-pm) {
-  visibility: hidden;
-}
 /*Sets the black-out styling behind the modal popup*/
 .syncronex-wall-overlay {
   visibility: visible;
@@ -6889,6 +6884,9 @@ a.sync-boxClose:before {
 .sync-toggle-content {
   display: none;
 }
+.sync-toggle label {
+  cursor: pointer;
+}
 input[type=checkbox].sync-toggle {
   display: none;
 }
@@ -6927,6 +6925,11 @@ input[type=checkbox].sync-toggle:checked ~ .sync-toggle-off {
     width: auto;
     transform: translate(-50%, -50%);
   }
+}
+p:not(.sync-pm),
+section:not(.sync-pm),
+article:not(.sync-pm) {
+  visibility: hidden;
 }
 .sync-wall-cta {
   font-size: 1.25em;

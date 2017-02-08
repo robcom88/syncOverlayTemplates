@@ -6788,11 +6788,6 @@
 body {
   overflow: hidden;
 }
-p:not(.sync-pm),
-section:not(.sync-pm),
-article:not(.sync-pm) {
-  visibility: hidden;
-}
 /*Sets the black-out styling behind the modal popup*/
 .syncronex-wall-overlay {
   visibility: visible;
@@ -6889,6 +6884,9 @@ a.sync-boxClose:before {
 .sync-toggle-content {
   display: none;
 }
+.sync-toggle label {
+  cursor: pointer;
+}
 input[type=checkbox].sync-toggle {
   display: none;
 }
@@ -6937,14 +6935,17 @@ input[type=checkbox].sync-toggle:checked ~ .sync-toggle-off {
 .sync-pm-bluegrad {
   background: #5b9bd5;
   /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #5b9bd5, rgba(91, 155, 213, 0.12));
+  background: -webkit-linear-gradient(left, #5b9bd5, rgba(91, 155, 213, 0.5));
   /*Safari 5.1-6*/
-  background: -o-linear-gradient(right, #5b9bd5, rgba(91, 155, 213, 0.12));
+  background: -o-linear-gradient(right, #5b9bd5, rgba(91, 155, 213, 0.5));
   /*Opera 11.1-12*/
-  background: -moz-linear-gradient(right, #5b9bd5, rgba(91, 155, 213, 0.12));
+  background: -moz-linear-gradient(right, #5b9bd5, rgba(91, 155, 213, 0.5));
   /*Fx 3.6-15*/
-  background: linear-gradient(to right, #5b9bd5, rgba(91, 155, 213, 0.12));
+  background: linear-gradient(to right, #5b9bd5, rgba(91, 155, 213, 0.5));
   /*Standard*/
+}
+.sync-pm-blueNoGrad {
+  background: #5b9bd5;
 }
 .sync-pm-alertContents {
   height: 100%;
@@ -6979,6 +6980,16 @@ input[type=checkbox].sync-toggle:checked ~ .sync-toggle-off {
 .sync-pm-alertPlanRow h6 {
   margin-top: 5px;
   margin-bottom: 2px;
+  background-color: #c0cee5;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid #333333;
+  border-bottom: 1px solid #333333;
+  border-left: 1px solid #CCCCCC;
+  border-radius: 4px;
+}
+.sync-pm-alertPlanRow h3:hover {
+  background-color: #97b5e5;
 }
 .sync-pm-alertSigninRow {
   /*row in the alert holding all the signin CTA*/
