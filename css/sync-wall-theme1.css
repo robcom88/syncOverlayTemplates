@@ -1,4 +1,10 @@
-﻿.sync-wall-cta {
+﻿p:not(.sync-pm),
+section:not(.sync-pm),
+article:not(.sync-pm) {
+    visibility: hidden;
+}
+
+.sync-wall-cta {
     font-size:1.25em;
     font-weight:bold;
 }

@@ -16,14 +16,14 @@
         single CSS file that you reference in the Overlay Edit page in admin
         (using a tool like LESS for instance)
     -->
-    <!--<link rel="stylesheet" href="css/syncbootstrap.css">
+    <link rel="stylesheet" href="css/syncbootstrap.css">
     <link rel="stylesheet" href="css/overlayBase.css">
-    <link rel="stylesheet" href="css/sync-alert-theme1.css" />-->
+    <link rel="stylesheet" href="css/sync-alert-theme1.css" />
     
     
-    <link rel="stylesheet" href="https://az829701.vo.msecnd.net/css/sync-theme1-alert.css" />
+    <!--<link rel="stylesheet" href="https://az829701.vo.msecnd.net/css/sync-theme1-alert.css" />-->
     <!--<link rel="stylesheet" href="https://az833833.vo.msecnd.net/css/sync-theme1-alert.min.css" />-->
-    <!--<link rel="stylesheet" href="css/sync-theme1-alert2.css" />-->
+    <!--<link rel="stylesheet" href="css/sync-theme1-alert.min.css" />-->
 </head>
 <body>
     <div class="container">
@@ -150,11 +150,23 @@
                     <div class="sync-pm-bluegrad sync-pm-alertContents container-fluid">
                         <div class="row sync-pm-alertTitle">
                             <div class="col-sm-12">
-                                <h3><%progressIndicator%></h3>
+                                <!--<h3><%progressIndicator%></h3>-->
+                                <h3>You have read 7 out of 255 articles!</h3>
                             </div>
                         </div>
                         <div class="row sync-pm-alertPlanRow">
-                            <%planTemplate_syncTheme1AlertLegacy_1%>
+                            <!--<%planTemplate_syncTheme1AlertLegacy_1%>-->
+                            <div class="col-sm-12">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        <a href="javascript:void(0)">
+                                            <h3>
+                                                <strong>Get a 24 Hour Pass for Just <span style="color: red">$1.00!</span></strong>
+                                            </h3>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <!-- login form -->
                         <div class="row sync-pm-alertSigninRow sync-logged-in-hidden sync-toggle">

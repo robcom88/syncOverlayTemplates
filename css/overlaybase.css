@@ -6,11 +6,7 @@
 body {
     overflow: hidden;
 }
-p:not(.sync-pm),
-section:not(.sync-pm),
-article:not(.sync-pm) {
-    visibility: hidden;
-}
+
 
 /*Sets the black-out styling behind the modal popup*/
 .syncronex-wall-overlay {
@@ -112,6 +108,9 @@ a.sync-boxClose:before {
 /* Content hidden until user clicks */
 .sync-toggle-content{
     display:none;
+}
+.sync-toggle label {
+    cursor: pointer;
 }
 input[type=checkbox].sync-toggle {
     display:none;

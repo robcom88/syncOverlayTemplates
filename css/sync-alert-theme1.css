@@ -7,11 +7,15 @@
 
 .sync-pm-bluegrad {
     background: rgb(91, 155, 213); /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(left,rgba(91, 155, 213,1),rgba(91, 155, 213,.12)); /*Safari 5.1-6*/
-    background: -o-linear-gradient(right,rgba(91, 155, 213,1),rgba(91, 155, 213,.12)); /*Opera 11.1-12*/
-    background: -moz-linear-gradient(right,rgba(91, 155, 213,1),rgba(91, 155, 213,.12)); /*Fx 3.6-15*/
-    background: linear-gradient(to right, rgba(91, 155, 213,1), rgba(91, 155, 213,.12)); /*Standard*/
+    background: -webkit-linear-gradient(left,rgba(91, 155, 213,1),rgba(91, 155, 213,.50)); /*Safari 5.1-6*/
+    background: -o-linear-gradient(right,rgba(91, 155, 213,1),rgba(91, 155, 213,.50)); /*Opera 11.1-12*/
+    background: -moz-linear-gradient(right,rgba(91, 155, 213,1),rgba(91, 155, 213,.50)); /*Fx 3.6-15*/
+    background: linear-gradient(to right, rgba(91, 155, 213,1), rgba(91, 155, 213,.50)); /*Standard*/
 }
+.sync-pm-blueNoGrad {
+    background: rgb(91, 155, 213);
+}
+
 .sync-pm-alertContents {
     
     height: 100%;
@@ -40,12 +44,22 @@
     cursor:pointer;
     text-decoration: none;
 }
+
 .sync-pm-alertPlanRow h1,.sync-pm-alertPlanRow h2,.sync-pm-alertPlanRow h3,
 .sync-pm-alertPlanRow h4,.sync-pm-alertPlanRow h5,.sync-pm-alertPlanRow h6 {
     margin-top: 5px;
     margin-bottom: 2px;
+    background-color:#c0cee5;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #CCCCCC;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #CCCCCC;
+    border-radius: 4px;
 }
-
+.sync-pm-alertPlanRow h3:hover {
+    background-color:#97b5e5;
+}
 
 .sync-pm-alertSigninRow {
     /*row in the alert holding all the signin CTA*/
