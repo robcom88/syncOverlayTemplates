@@ -8,11 +8,11 @@
     <title>Default Overlay Template Framework Page</title>
     <!-- Bootstrap -->
     <!-- Leave this one. it is styling the dummy page -->
-    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>
+<!--    <link rel="stylesheet" href="css/bootstrap/css/bootstrap.min.css"/>-->
 
     <!-- include your stylesheets here-->
-    <link rel="stylesheet" href="css/overlayBase.css">
     <link rel="stylesheet" href="css/syncbootstrap.css">
+    <link rel="stylesheet" href="css/overlayBase.css">
     <link rel="stylesheet" href="css/sync-wall-theme1.css"/>
 </head>
 <body>
@@ -120,216 +120,217 @@
             <div id="syncronexOverlayContainer" class="syncronex-wall-overlay-container">
                 <div id="syncronexOverlayContent" class="syncronex-wall-overlay-content">
                     <!-- Overlay Template Snippet starts here -->
-                    <div class="sync-pm container-fluid">
-                        <!-- mobile login content hidden until user toggles-->
-                        <input id="mobile-login-toggle" type="checkbox" class="sync-toggle" />
-                        <div id="mobileloginForm" class="sync-toggle-content">
-                            <div class="row">
-                                <div class="col-md-6 sync-wall-header-logo">
-                                    <img alt="logo" src="img/ACMENewsLogo.png"/>
+                    <div class="sync-pm">
+                        <div class="sync-pm container-fluid">
+                            <!-- mobile login content hidden until user toggles-->
+                            <input id="mobile-login-toggle" type="checkbox" class="sync-toggle" />
+                            <div id="mobileloginForm" class="sync-toggle-content">
+                                <div class="row">
+                                    <div class="col-md-6 sync-wall-header-logo">
+                                        <img alt="logo" src="img/ACMENewsLogo.png" />
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <p class="sync-pm">Existing subscribers can sign in below.</p>
-                                    <form class="form-inline" id="saoverlayloginform" autocomplete="off">
-                                        <div class="form-group">
-                                            <input class="form-control saoverlayloginemail" placeholder="Email" type="email">
-                                        </div>
-                                        <div class="form-group">
-                                            <input class="form-control saoverlayloginpassword" type="password" placeholder="Password">
-                                        </div>
-                                        <div class="form-group saoverlayloginvalidationmessage has-error hidden">
-                                            <span class="help-block">Invalid Email or Password!</span>
-                                        </div>
-                                        <div class="form-group">
-                                            <button class="btn btn-primary form-control" type="submit">Log in</button>
-                                        </div>
-                                        <div class="form-group">
-                                            <a href="#">Forgot Password?</a>
-                                        </div>
-                                    </form>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="sync-pm">Existing subscribers can sign in below.</p>
+                                        <form class="form-inline" id="saoverlayloginform" autocomplete="off">
+                                            <div class="form-group">
+                                                <input class="form-control saoverlayloginemail" placeholder="Email" type="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control saoverlayloginpassword" type="password" placeholder="Password">
+                                            </div>
+                                            <div class="form-group saoverlayloginvalidationmessage has-error hidden">
+                                                <span class="help-block">Invalid Email or Password!</span>
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary form-control" type="submit">Log in</button>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="#">Forgot Password?</a>
+                                            </div>
+                                        </form>
 
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <p class="sync-pm">If you are a print subscriber but have not created an account yet, click the button below to get started! </p>
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <a id="activate" class="btn btn-info form-control" src="#">
+                                                    <span class="sync-wall-mobile-login-btn-text tablet-click">Activate</span>
+                                                </a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <form class="form-inline">
+                                            <div class="form-group">
+                                                <label id="cancelBtn" class="btn btn-default form-control sync-toggle" for="mobile-login-toggle">
+                                                    <span class="sync-wall-mobile-login-btn-text tablet-click">Cancel</span>
+                                                </label>
+                                            </div>
+                                        </form>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <!-- end mobile login content -->
+                            <!-- header and logon cta-->
+                            <div class="row sync-toggle-off">
+                                <div class="col-sm-6 sync-wall-header-logo">
+                                    <img alt="logo" src="img/ACMENewsLogo.png" />
+                                </div>
+
+                                <div class="col-sm-6 sync-wall-cta hidden-xs">
+                                    <p class="sync-pm">
+                                        Already a subscriber?
+                                        <label for="desktop-login-toggle">Log in</label>
+                                    </p>
+                                    <input type="checkbox" id="desktop-login-toggle" class="sync-toggle" />
+                                    <div id="desktop-login-form" class="sync-toggle-content">
+                                        <form class="form" id="saoverlayloginform" autocomplete="off">
+                                            <div class="form-group">
+                                                <input class="form-control saoverlayloginemail" placeholder="Email" type="email">
+                                            </div>
+                                            <div class="form-group">
+                                                <input class="form-control saoverlayloginpassword" type="password" placeholder="Password">
+                                            </div>
+                                            <div class="form-group">
+                                                <button class="btn btn-primary form-control" type="submit">Log in</button>
+                                            </div>
+                                            <div class="form-group">
+                                                <a href="#">Forgot Password?</a>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <p class="sync-pm">
+                                        Have a print subscription? <a href="#">Activate</a>
+                                    </p>
+                                </div>
+                                <div class="col-xs-12 sync-wall-cta text-center sync-desktop-hidden">
+                                    <p class="sync-pm">Already a subscriber?</p>
+                                    <p class="sync-pm">
+                                        <label id="mobile-login-form-toggle-btn" for="mobile-login-toggle">Click Here</label>
+                                    </p>
+                                </div>
+
+                            </div>
+                            <div class="row sync-toggle-off">
                                 <div class="col-xs-12">
-                                    <p class="sync-pm">If you are a print subscriber but have not created an account yet, click the button below to get started! </p>
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <a id="activate" class="btn btn-info form-control" src="#">
-                                                <span class="sync-wall-mobile-login-btn-text tablet-click">Activate</span>
-                                            </a>
-                                        </div>
-                                    </form>
+                                    <div class="sync-wall-header1 text-center">
+                                        <span class="sync-wall-header1-text">Become a Subscriber!</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row sync-toggle-off">
+                                <div class="col-xs-12">
+                                    <div class="sync-wall-header2 text-center">
+                                        <p class="sync-wall-header2-text sync-pm">You have read your 10 free articles for the month. Select a plan below to start your subscription today.</p>
+                                    </div>
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-xs-12">
-                                    <form class="form-inline">
-                                        <div class="form-group">
-                                            <label id="cancelBtn" class="btn btn-default form-control sync-toggle" for="mobile-login-toggle">
-                                                <span class="sync-wall-mobile-login-btn-text tablet-click">Cancel</span>
+                            <!-- plan list here-->
+                            <div class="row sync-wall-plan-list sync-toggle-off">
+                                <div class="col-md-4">
+                                    <!-- plan template 1st here-->
+                                    <div class="sync-wall-3Plan-plan-container text-center">
+                                        <img src="img/2d2.png" />
+                                        <div class="sync-wall-3Plan-plan-title">
+                                            <span class="sync-wall-3Plan-plan-title-text">Digital Only Access $9.99/month</span>
+                                        </div>
+                                        <div class="sync-wall-3Plan-plan-details">
+                                            <label id="plan-details-toggle-btn-1" for="plan-details-toggle-1" class="sync-toggle">
+                                                <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
                                             </label>
                                         </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- end mobile login content -->
-
-                       <!-- header and logon cta-->
-                        <div class="row sync-toggle-off">
-                            <div class="col-sm-6 sync-wall-header-logo">
-                                <img alt="logo" src="img/ACMENewsLogo.png"/>
-                            </div>
-
-                            <div class="col-sm-6 sync-wall-cta hidden-xs">
-                                <p class="sync-pm">
-                                    Already a subscriber?
-                                    <label for="desktop-login-toggle">Log in</label>
-                                </p>
-                                <input type="checkbox" id="desktop-login-toggle" class="sync-toggle"/>
-                                <div id="desktop-login-form" class="sync-toggle-content">
-                                    <form class="form" id="saoverlayloginform" autocomplete="off">
-                                        <div class="form-group">
-                                            <input class="form-control saoverlayloginemail" placeholder="Email" type="email">
+                                        <input type="checkbox" id="plan-details-toggle-1" class="sync-toggle" />
+                                        <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
+                                            <ul class="text-left">
+                                                <li>Great and amazing feature #1</li>
+                                                <li>Great and really amazing feature #2</li>
+                                                <li>Great and amazing feature #3</li>
+                                                <li>Great feature #4</li>
+                                            </ul>
+                                            <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
                                         </div>
-                                        <div class="form-group">
-                                            <input class="form-control saoverlayloginpassword" type="password" placeholder="Password">
-                                            </div>
-                                        <div class="form-group">
-                                            <button class="btn btn-primary form-control" type="submit">Log in</button>
+                                    </div>
+                                    <!-- end plan template -->
+                                </div>
+                                <div class="col-md-4">
+                                    <!-- plan template 2nd here-->
+                                    <div class="sync-wall-3Plan-plan-container text-center">
+                                        <img src="img/pnd2.png" />
+                                        <div class="sync-wall-3Plan-plan-title">
+                                            <span class="sync-wall-3Plan-plan-title-text">Print + Digital Access $19.99/month</span>
                                         </div>
-                                        <div class="form-group">
-                                            <a href="#">Forgot Password?</a>
+                                        <div class="sync-wall-3Plan-plan-details">
+                                            <label id="plan-details-toggle-btn-2" for="plan-details-toggle-2" class="sync-toggle">
+                                                <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
+                                            </label>
                                         </div>
-                                    </form>
+                                        <input type="checkbox" id="plan-details-toggle-2" class="sync-toggle" />
+                                        <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
+                                            <ul class="text-left">
+                                                <li>Great and amazing feature #1</li>
+                                                <li>Great and really amazing feature #2</li>
+                                                <li>Great and amazing feature #3</li>
+                                                <li>Great feature #4</li>
+                                            </ul>
+                                            <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
+                                        </div>
+
+                                    </div>
+                                    <!-- end plan template -->
                                 </div>
-                                <p class="sync-pm">
-                                    Have a print subscription? <a href="#">Activate</a>
-                                </p>
+                                <div class="col-md-4">
+                                    <!-- plan template 3rd here-->
+                                    <div class="sync-wall-3Plan-plan-container text-center">
+                                        <img src="img/3d2.png" />
+                                        <div class="sync-wall-3Plan-plan-title">
+                                            <span class="sync-wall-3Plan-plan-title-text">Digital Only Trial 99&cent; for 4 weeks*</span>
+                                        </div>
+                                        <div class="sync-wall-3Plan-plan-details">
+                                            <label id="plan-details-toggle-btn-3" for="plan-details-toggle-3" class="sync-toggle">
+                                                <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
+                                            </label>
+                                        </div>
+                                        <input type="checkbox" id="plan-details-toggle-3" class="sync-toggle" />
+                                        <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
+                                            <ul class="text-left">
+                                                <li>Great and amazing feature #1</li>
+                                                <li>Great and really amazing feature #2</li>
+                                                <li>Great and amazing feature #3</li>
+                                                <li>Great feature #4</li>
+                                            </ul>
+                                            <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
+                                        </div>
+
+                                    </div>
+                                    <!-- end plan template -->
+                                </div>
                             </div>
-                            <div class="col-xs-12 sync-wall-cta text-center sync-desktop-hidden">
-                                <p class="sync-pm">Already a subscriber?</p>
-                                <p class="sync-pm">
-                                    <label id="mobile-login-form-toggle-btn" for="mobile-login-toggle">Click Here</label>
-                                </p>
+
+                            <div class="row">
+                                <div class="col-md-12 sync-wall-terms text-center">
+                                    <a class="sync-wall-terms-link" href="#">Terms &amp; Conditions</a>
+                                    &nbsp;
+                                    &nbsp;
+                                    <a class="sync-wall-terms-link" href="#">Privacy Policy</a>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 sync-wall-footer text-center">
+                                    <span class="sync-wall-footer-text">Powered by Syncronex&copy;</span>
+                                </div>
                             </div>
 
                         </div>
-                        <div class="row sync-toggle-off">
-                            <div class="col-xs-12">
-                                <div class="sync-wall-header1 text-center">
-                                    <span class="sync-wall-header1-text">Become a Subscriber!</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row sync-toggle-off">
-                            <div class="col-xs-12">
-                                <div class="sync-wall-header2 text-center">
-                                    <p class="sync-wall-header2-text sync-pm">You have read your 10 free articles for the month. Select a plan below to start your subscription today.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- plan list here-->
-                        <div class="row sync-wall-plan-list sync-toggle-off">
-                            <div class="col-md-4">
-                                <!-- plan template 1st here-->
-                                <div class="sync-wall-3Plan-plan-container text-center">
-                                    <img src="img/2d2.png" />
-                                    <div class="sync-wall-3Plan-plan-title">
-                                        <span class="sync-wall-3Plan-plan-title-text">Digital Only Access $9.99/month</span>
-                                    </div>
-                                    <div class="sync-wall-3Plan-plan-details">
-                                        <label id="plan-details-toggle-btn-1" for="plan-details-toggle-1" class="sync-toggle">
-                                            <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
-                                        </label>
-                                    </div>
-                                    <input type="checkbox" id="plan-details-toggle-1" class="sync-toggle"/>
-                                    <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
-                                        <ul class="text-left">
-                                            <li>Great and amazing feature #1</li>
-                                            <li>Great and really amazing feature #2</li>
-                                            <li>Great and amazing feature #3</li>
-                                            <li>Great feature #4</li>
-                                        </ul>
-                                        <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
-                                    </div>
-                                </div>
-                                <!-- end plan template -->
-                            </div>
-                            <div class="col-md-4">
-                                <!-- plan template 2nd here-->
-                                <div class="sync-wall-3Plan-plan-container text-center">
-                                    <img src="img/pnd2.png" />
-                                    <div class="sync-wall-3Plan-plan-title">
-                                        <span class="sync-wall-3Plan-plan-title-text">Print + Digital Access $19.99/month</span>
-                                    </div>
-                                    <div class="sync-wall-3Plan-plan-details">
-                                        <label id="plan-details-toggle-btn-2" for="plan-details-toggle-2" class="sync-toggle">
-                                            <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
-                                        </label>
-                                    </div>
-                                    <input type="checkbox" id="plan-details-toggle-2" class="sync-toggle" />
-                                    <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
-                                        <ul class="text-left">
-                                            <li>Great and amazing feature #1</li>
-                                            <li>Great and really amazing feature #2</li>
-                                            <li>Great and amazing feature #3</li>
-                                            <li>Great feature #4</li>
-                                        </ul>
-                                        <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
-                                    </div>
-
-                                </div>
-                                <!-- end plan template -->
-                            </div>
-                            <div class="col-md-4">
-                                <!-- plan template 3rd here-->
-                                <div class="sync-wall-3Plan-plan-container text-center">
-                                    <img src="img/3d2.png" />
-                                    <div class="sync-wall-3Plan-plan-title">
-                                        <span class="sync-wall-3Plan-plan-title-text">Digital Only Trial 99&cent; for 4 weeks*</span>
-                                    </div>
-                                    <div class="sync-wall-3Plan-plan-details">
-                                        <label id="plan-details-toggle-btn-3" for="plan-details-toggle-3" class="sync-toggle">
-                                            <span class="sync-wall-3Plan-plan-details-link">Plan Details</span>
-                                        </label>
-                                    </div>
-                                    <input type="checkbox" id="plan-details-toggle-3" class="sync-toggle" />
-                                    <div class="sync-wall-3Plan-plan-details-callout sync-toggle-content">
-                                        <ul class="text-left">
-                                            <li>Great and amazing feature #1</li>
-                                            <li>Great and really amazing feature #2</li>
-                                            <li>Great and amazing feature #3</li>
-                                            <li>Great feature #4</li>
-                                        </ul>
-                                        <a href="#" class="btn btn-info btn-sm sync-wall-plan-details-button">Subscribe</a>
-                                    </div>
-
-                                </div>
-                                <!-- end plan template -->
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 sync-wall-terms text-center">
-                                <a class="sync-wall-terms-link" href="#">Terms &amp; Conditions</a>
-                                &nbsp;
-                                &nbsp;
-                                <a class="sync-wall-terms-link" href="#">Privacy Policy</a>
-                            </div>
-                        </div>
-
-                        <div class="row">
-                            <div class="col-md-12 sync-wall-footer text-center">
-                                <span class="sync-wall-footer-text">Powered by Syncronex&copy;</span>
-                            </div>
-                        </div>
-
                     </div>
                     <!-- Overlay Snippet ends here -->
                 </div>

@@ -16,6 +16,7 @@
  */
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 }
+.sync-pm,
 .sync-pm html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6804,7 +6805,7 @@ body {
 /* provides the centering container for the actual modal */
 .syncronex-wall-overlay-container {
   visibility: visible;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   height: 100%;
@@ -6875,6 +6876,9 @@ a.sync-box-close {
 a.sync-box-close:before {
   content: "\00d7";
   /* &times; */
+}
+a.sync-box-close:hover {
+  text-decoration: none;
 }
 /* 
     general support for the 'toggling' 

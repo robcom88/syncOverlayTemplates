@@ -1,3 +1,4 @@
+/* combine css components into one stylesheet */
 .sync-pm {
   /*!
  * Bootstrap v3.3.5 (http://getbootstrap.com)
@@ -15,13 +16,11 @@
  */
   /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 }
-.sync-pm,
 .sync-pm html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
-
 .sync-pm body {
   margin: 0;
 }
@@ -6781,4 +6780,222 @@
   .sync-pm .hidden-print {
     display: none !important;
   }
+}
+/*
+    Base style for overlay (modal popup and nag behavior)
+*/
+/* Prevent user from scrolling the overlay off the screen*/
+body {
+  overflow: hidden;
+}
+/*Sets the black-out styling behind the modal popup*/
+.syncronex-wall-overlay {
+  visibility: visible;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483645;
+  background-color: #313131;
+  opacity: .95;
+  filter: alpha(opacity=95);
+}
+/* provides the centering container for the actual modal */
+.syncronex-wall-overlay-container {
+  visibility: visible;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 2147483646;
+  overflow-y: scroll;
+  /* allow the overlay to be scrolled if it's too big for screen */
+}
+/* Styles the actual modal */
+.syncronex-wall-overlay-content {
+  visibility: visible;
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  width: 90%;
+  background-color: #fff;
+  padding: 10px;
+  z-index: 2147483647;
+  box-sizing: border-box;
+}
+.syncronex-warning-overlay {
+  visibility: visible;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+  background-color: #313131;
+  opacity: .95;
+  filter: alpha(opacity=95);
+}
+.syncronex-warning-overlay-container {
+  visibility: visible;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2147483647;
+}
+.sync-pm-shadow {
+  box-shadow: none;
+}
+.syncronex-warning-overlay-content {
+  background-color: #FFFFFF;
+  z-index: 2147483647;
+}
+/* Base 'close' button for alerts*/
+a.sync-boxClose {
+  float: right;
+  margin-top: 0;
+  margin-right: 0;
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #AEAEAE;
+  border-radius: 30px;
+  background-color: #333333;
+  font-size: 25px;
+  font-weight: bold;
+  display: inline-block;
+  line-height: 0;
+  padding: 11px 3px;
+}
+a.sync-boxClose:before {
+  content: "\00d7";
+  /* &times; */
+}
+/* 
+    general support for the 'toggling' 
+    use a checkbox input type with class='sync-toggle'
+    followed immediately by a block element with class='sync-toggle-content'
+    then a <label> for the checkbox that is styled to look like a button, link, etc
+    to trigger the toggle.
+*/
+/* Content hidden until user clicks */
+.sync-toggle-content {
+  display: none;
+}
+input[type=checkbox].sync-toggle {
+  display: none;
+}
+/* display hiddent content if checkbox is checked*/
+input[type=checkbox].sync-toggle:checked + .sync-toggle-content {
+  display: block;
+}
+/* optional: use this to hide the toggler (button, etc.)*/
+input[type=checkbox].sync-toggle:checked ~ .sync-toggle-off {
+  display: none;
+}
+@media (min-height: 640px) and (min-width: 640px) {
+  .syncronex-warning-overlay {
+    display: none;
+  }
+  .syncronex-warning-overlay-container {
+    position: fixed;
+    left: 5px;
+    top: 50%;
+    width: auto;
+    height: auto;
+    transform: none;
+  }
+  .syncronex-warning-overlay-content {
+    box-shadow: 5px 5px 5px #333333;
+  }
+  a.sync-boxClose {
+    margin-top: -12px;
+    margin-right: -12px;
+  }
+}
+@media (min-width: 992px) {
+  .syncronex-wall-overlay-content {
+    top: 50%;
+    left: 50%;
+    width: auto;
+    transform: translate(-50%, -50%);
+  }
+}
+/* Creates a fuzzy inset border around the div*/
+.sync-pm-borderBlur {
+  border-radius: 5px;
+  border: 1px solid #5b9bd5;
+  box-shadow: 0 0 5px #5b9bd5, inset 0 0 5px #5b9bd5;
+}
+.sync-pm-bluegrad {
+  background: #5b9bd5;
+  /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #5b9bd5, rgba(91, 155, 213, 0.12));
+  /*Safari 5.1-6*/
+  background: -o-linear-gradient(right, #5b9bd5, rgba(91, 155, 213, 0.12));
+  /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right, #5b9bd5, rgba(91, 155, 213, 0.12));
+  /*Fx 3.6-15*/
+  background: linear-gradient(to right, #5b9bd5, rgba(91, 155, 213, 0.12));
+  /*Standard*/
+}
+.sync-pm-alertContents {
+  height: 100%;
+  padding: 10px;
+}
+.sync-pm-alertTitle,
+.sync-pm-alertTitle h1,
+.sync-pm-alertTitle h2,
+.sync-pm-alertTitle h3,
+.sync-pm-alertTitle h4,
+.sync-pm-alertTitle h5,
+.sync-pm-alertTitle h6 {
+  margin-top: inherit;
+  color: #ffffff;
+}
+.sync-pm-alertPlanRow {
+  /*row in the alert showing offer info*/
+}
+.sync-pm-alertPlanRow a,
+.sync-pm-alertPlanRow a:hover,
+.sync-pm-alertPlanRow a:visited,
+.sync-pm-alertPlanRow a:active {
+  color: inherit;
+  cursor: pointer;
+  text-decoration: none;
+}
+.sync-pm-alertPlanRow h1,
+.sync-pm-alertPlanRow h2,
+.sync-pm-alertPlanRow h3,
+.sync-pm-alertPlanRow h4,
+.sync-pm-alertPlanRow h5,
+.sync-pm-alertPlanRow h6 {
+  margin-top: 5px;
+  margin-bottom: 2px;
+}
+.sync-pm-alertSigninRow {
+  /*row in the alert holding all the signin CTA*/
+  color: #ffffff;
+  margin-top: 10px;
+}
+a.sync-underline:hover,
+a.sync-underline:active,
+a.sync-underline:visited,
+a.sync-underline:default {
+  color: #ffffff;
+  text-decoration: underline;
+}
+.sync-pm-alertSigninRowForm {
+  /* form for the sign in*/
+  display: none;
+}
+.sync-pm-alertPriceFont {
+  color: #ff0000;
+}
+.sync-pm-alertCopyrightRow {
+  /*row containing the 'powerd by' text*/
+  margin-top: 10px;
+  text-align: center;
 }
