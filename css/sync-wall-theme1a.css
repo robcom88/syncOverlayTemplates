@@ -1,0 +1,111 @@
+﻿p:not(.sync-pm),
+section:not(.sync-pm),
+article:not(.sync-pm) {
+    visibility: hidden;
+}
+
+.sync-wall-cta {
+    font-size:1.25em;
+    font-weight:bold;
+}
+.sync-wall-cta a,
+.sync-wall-cta label{
+    text-decoration: underline;
+    color:inherit;
+}
+input[type=checkbox]#mobile-login-toggle:checked + .sync-toggle-content{
+    display:block;
+}
+
+input[type=checkbox]#mobile-login-toggle:checked .sync-toggle-off{
+    display:none;
+}
+
+.sync-wall-header-logo img{
+    max-width:100%;
+    max-height:100%;
+}
+
+.sync-wall-header1-text{
+    font-weight:bold;
+    font-size:1.5em;
+}
+
+.sync-wall-header2-text {
+    font-size:inherit;
+}
+
+.sync-wall-3Plan-plan-container{
+ /* box-shadow: 0 24px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);*/
+    border: 1px solid #ccc;
+    border-radius:4px;
+    margin-bottom:10px;
+    padding-bottom:10px;
+}
+
+.sync-wall-3Plan-plan-container img{
+    max-height:100%;
+    max-width:100%;
+}
+
+.sync-wall-3Plan-plan-title-text{
+    color:#002060;
+    font-weight:bold;
+}
+
+.sync-wall-3Plan-plan-details-link{
+    color:#002060;
+    text-decoration:underline;
+}
+
+.sync-wall-3Plan-plan-details-callout ul {
+    text-align: left;
+}
+
+.sync-wall-3Plan-plan-details-callout li{
+    margin-left:-10px;
+    font-size:.75em;
+    color:#002060;
+}
+
+.sync-wall-terms{
+    margin-top:20px;
+}
+
+.sync-wall-terms-link{
+    text-decoration: underline;
+    color:inherit;
+}
+
+.sync-wall-footer{
+    margin-top:10px;
+}
+
+.sync-wall-footer-text{
+    font-size:.5em;
+}
+
+@media (min-width: 768px){
+    .sync-desktop-hidden{
+        display:none;
+    }
+
+    .sync-wall-cta {
+        font-size:0.90em;
+        font-weight:inherit;
+    }
+
+    .sync-wall-cta a{
+        text-decoration: underline;
+        color:inherit;
+    }
+
+}
+@media(min-width:992px) {
+    .sync-wall-3Plan-plan-container{
+        /*box-shadow: 0 24px 24px 0 rgba(0,0,0,0.2),0 40px 77px 0 rgba(0,0,0,0.22);*/
+        margin-bottom:inherit;
+        height:auto;
+        min-height:350px;
+    }
+}
