@@ -1,0 +1,82 @@
+<div class="sync-pm">
+    <input type="hidden" value="<%urlBase%>" />
+    <div class="syncronex-inline-overlay"></div>
+    <div id="syncronexOverlayContainer" class="syncronex-inline-overlay-container">
+        <div id="syncronexOverlayContent" class="syncronex-inline-overlay-content sync-pm-borderBlur">
+            <div class="row">
+                <div class="col-md-12">
+                    <span class="h3"><strong><%inlineOverlayTitle%></strong></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="sync-pm">
+                        <%inlineOverlayDescription%>
+                    </p>
+                </div>
+            </div>
+
+            <div class="row sync-logged-in-visible">
+                <div class="col-md-12 sync-logged-in-visible">
+                    <div class="alert alert-info sync-pm-inlineExistingUserMsg">
+                        <%signedInNonSubscriberMessage%>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                    <%planTemplate_inlineTheme1_1%>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <br />
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 sync-pm-inlineSigninRow sync-logged-in-hidden">
+                    <span class="h6"><%existingAccountMessage%></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 sync-logged-in-hidden">
+                    <form class="form-inline sync-overlay-login-form">
+                        <fieldset>
+                            <div class="form-group">
+                                <input class="form-control sync-overlay-login-username" type="email" placeholder="<%loginEmailPlaceholder%>" />
+                            </div>
+                            <div class="form-group">
+                                <input class="form-control sync-overlay-login-password" type="password" placeholder="<%loginPasswordPlaceholder%>" />
+                            </div>
+                            <div class="form-group">
+                                <button class="btn btn-info form-control" type="submit"><%loginButtonCaption%></button>
+                            </div>
+                            <div class="form-group">
+                                <a href="<%forgotPasswordLink%>" class="tablet-click"><span class="sync-underline h5"><%forgotPasswordLinkText%></span></a>
+                            </div>
+                        </fieldset>
+                        <fieldset>
+                            <div class="form-group sync-overlay-login-error col-sm-12">
+                                <div class="alert alert-danger">
+                                    <p><%invalidLoginMessage%></p>
+                                </div>
+                            </div>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+            <div class="row sync-activation-row sync-logged-in-hidden">
+                <div class="col-md-12">
+                    <div class="h6"><%existingPrintSubscriptionPrompt%></div>
+                    <form id="sync-activate-form" method="get" action="<%activateLink%>">
+                        <div class="form-group">
+                            <button type="button" class="btn-sync-activate btn"><%activateLinkText%></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

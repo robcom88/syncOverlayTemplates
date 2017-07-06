@@ -15,6 +15,10 @@
     <link rel="stylesheet" href="css/overlayBase.css">
     <link rel="stylesheet" href="css/syncbootstrap.css">
     <link rel="stylesheet" href="css/sync-inline-theme1.css" />
+    
+    <!-- comment the working files above and uncomment the line below
+         to make sure your compiled sheet still works as expected -->
+<!--    <link rel="stylesheet" href="css/sync-theme1-inline.min.css"/>-->
 </head>
 <body>
     <div class="container">
@@ -89,6 +93,7 @@
             <p>&copy; Syncronex, LLC 2016</p>
         </footer>
         <div id="sampleOverlayContent">
+            <!-- Overlay template starts below this line -->
             <div class="sync-pm">
                 <div class="syncronex-inline-overlay"></div>
                 <div id="syncronexOverlayContainer" class="syncronex-inline-overlay-container">
@@ -105,6 +110,17 @@
                                 </p>
                             </div>
                         </div>
+
+                        <div class="row sync-logged-in-visible">
+                            <div class="col-md-12 sync-logged-in-visible">
+                                <div class="alert alert-info sync-pm-inlineExistingUserMsg">
+                                    Welcome back!  We can't find an active subscription
+                                    for you.  In order to continue reading, you'll have
+                                    to subscribe.
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="hidden-xs">
@@ -143,12 +159,12 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-12 sync-pm-inlineSigninRow">
+                            <div class="col-md-12 sync-pm-inlineSigninRow sync-logged-in-hidden">
                                 <span class="h6">Current users sign in here</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 sync-logged-in-hidden">
                                 <form class="form-inline sync-overlay-login-form">
                                     <fieldset>
                                         <div class="form-group">
@@ -159,6 +175,9 @@
                                         </div>
                                         <div class="form-group">
                                             <button class="btn btn-info form-control" type="submit">Sign in</button>
+                                        </div>
+                                        <div class="form-group">
+                                            <a href="#" class="tablet-click"><span class="sync-underline h5">Forgot your password?</span></a>
                                         </div>
                                     </fieldset>
                                     <fieldset>
@@ -172,7 +191,7 @@
                             </div>
                         </div>
 
-                        <div class="row sync-activation-row">
+                        <div class="row sync-activation-row sync-logged-in-hidden">
                             <div class="col-md-12">
                                 <div class="h6">Do you have a subscription to ACME News? Activate it to get digital access!</div>
                                 <form id="sync-activate-form">
@@ -187,15 +206,50 @@
                     </div>
                 </div>
             </div>
+            <!-- Overlay template ends above this line -->
         </div>
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
             integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
             crossorigin="anonymous"></script>
+    
     <script src="https://cdn.syncronex.com/libs/v0.1/syncOverlaySdk.js"></script>
+
     <script>
         $(function () {
+            var mockLoginSdk = {
+                getLoginStatus: function (success, fail) {
+                    setTimeout(function () {
+                        success({ loggedIn: false });
+                    },
+                        500);
+                },
+                loginUser: function (un, pw, success, fail) {
+                    setTimeout(function () {
+                        if (un === pw) {
+                            success({
+                                token: 'abcdef',
+                                username: 'preview@acme.com',
+                                legacyToken: 'abcdef',
+                                errorMsg: ''
+                            });
+                        } else {
+                            fail({
+                                token: '',
+                                username: '',
+                                legacyToken: '',
+                                errorMsg: 'Invalid Logon'
+                            });
+                        }
+                    },
+                        500);
+                }
+            };
+
+
             var sdk = syncOverlaySdk;
+            sdk.externalLoginSdk = mockLoginSdk;
+
             var template = $('#sampleOverlayContent');
             var content = template.html();
             var anchor = $('#sync-inline-overlay');
