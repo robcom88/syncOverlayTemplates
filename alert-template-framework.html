@@ -150,28 +150,16 @@
                     <div class="sync-pm-bluegrad sync-pm-alertContents container-fluid">
                         <div class="row sync-pm-alertTitle">
                             <div class="col-sm-12">
-                                <!--<h3><%progressIndicator%></h3>-->
-                                <h3>You have read 7 out of 255 articles!</h3>
+                                <h3><%progressIndicator%></h3>
                             </div>
                         </div>
                         <div class="row sync-pm-alertPlanRow">
-                            <!--<%planTemplate_syncTheme1AlertLegacy_1%>-->
-                            <div class="col-sm-12">
-                                <div class="row">
-                                    <div class="col-sm-12">
-                                        <a href="javascript:void(0)">
-                                            <h3>
-                                                <strong>Get a 24 Hour Pass for Just <span style="color: red">$1.00!</span></strong>
-                                            </h3>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <%planTemplate_syncTheme1AlertLegacy_1%>
                         </div>
                         <!-- login form -->
                         <div class="row sync-pm-alertSigninRow sync-logged-in-hidden sync-toggle">
                             <div class="col-sm-12">
-                                <label for="sync-login-toggle">
+                                <label for="sync-login-toggle" role="button">
                                     <span class="h5 sync-underline"><%existingAccountMessage%></span>
                                 </label>
                             </div>
@@ -196,13 +184,18 @@
                                             <div class="form-group sync-overlay-login-error col-sm-12">
                                                 <div class="alert alert-danger">
                                                     <p><%invalidLoginMessage%></p>
-                                                    <a href="<%ForgotPasswordLink%>" class="tablet-click"><span class="h6"><%ForgotPasswordLinkText%></span></a>
                                                 </div>
                                             </div>
                                         </fieldset>
                                     </form>
                                 </div>
                             </div>
+                            <div class="row sync-pm-alertSigninRow">
+                                <div class="col-sm-12">
+                                    <a href="<%ForgotPasswordLink%>" class="tablet-click"><span class="h5"><%ForgotPasswordLinkText%></span></a>
+                                </div>
+                            </div>
+
                             <div class="row sync-pm-alertSigninRow">
                                 <div class="col-sm-12">
                                     <span class="h5"><%ExistingPrintSubscriptionPrompt%> </span><a href="<%ActivateLink%>" class="tablet-click"><%ActivateLinkText%></a>
@@ -228,7 +221,8 @@
                             </div>
                         </div>
                     </div>
-                </div>                <!-- Overlay Snippet ends here -->
+                </div>
+                <!-- Overlay Snippet ends here -->
             </div>
             </div>
         </div>
