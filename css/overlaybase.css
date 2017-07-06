@@ -67,6 +67,13 @@ body {
     z-index: 2147483647;
 }
 
+.syncronex-inline-overlay-content{
+    height:100%;
+    width:100%;
+    padding:10px;
+}
+
+
 .sync-underline {
     text-decoration: underline;
 }
