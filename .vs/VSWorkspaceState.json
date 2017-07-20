@@ -1,6 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\css",
+    "\\theme1"
   ],
+  "SelectedNode": "\\css\\sync-theme1-inline.min.css",
   "PreviewInSolutionExplorer": false
 }

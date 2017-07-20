@@ -1,0 +1,26 @@
+<div class=\"hidden-xs\">
+    <div class=\"sync-pm-inlinePlanRow\">
+        <form id=\"sync-plan-form\" class=\"form-inline\" method=\"get\" action=\"<%urlBase%>/portal/#/purchase/<%Plan_Id%>?origin=wall&returnUrl=<%returnUrl%>&cancelUrl=<%cancelUrl%>&op=subscribe\">
+            <div class=\"form-group\">
+                <p class=\"sync-pm form-control-static plan-description\">
+                    <%Plan_Description%>
+                </p>
+            </div>
+            <div class=\"pull-right\">
+                <button class=\"btn btn-default\"><%planSubscribeButtonCaption%></button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class=\"visible-xs-block\">
+    <div class=\"sync-pm-inlinePlanRow text-center\">
+        <form id=\"sync-plan-form\"  method=\"get\" action=\"<%urlBase%>/portal/#/purchase/<%Plan_Id%>?origin=wall&returnUrl=<%returnUrl%>&cancelUrl=<%cancelUrl%>&op=subscribe\">
+            <div class=\"form-group\">
+                <p class=\"sync-pm form-control-static plan-description\">
+					<%Plan_Description%>
+                </p>
+            </div>
+            <button class=\"btn btn-default\"><%planSubscribeButtonCaption%></button>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,65 @@
+﻿/* remove the round corners from elmeents */
+* {
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+    border-radius: 0 !important;
+}
+
+.sync-pm-borderBlur {
+    border: 1px solid rgb(91,155,213);
+}
+
+.sync-pm-inlineTitle,
+.sync-pm-inlineTitle h1,
+.sync-pm-inlineTitle h2,
+.sync-pm-inlineTitle h3,
+.sync-pm-inlineTitle h4,
+.sync-pm-inlineTitle h5,
+.sync-pm-inlineTitle h6 {
+    margin-top: inherit;
+    color: #ffffff;
+}
+
+.sync-pm-inlinePlanRow {
+    background-color:rgb(91,155,213);
+    display:table;
+    width:100%;
+    padding:5px;
+}
+
+.sync-pm-inlinePlanRow .plan-description {
+        color: white;
+}
+
+.sync-activation-row button.btn-sync-activate{
+    background-color: white;
+    color: rgb(91,155,213);
+    border: 1px solid rgb(91,155,213);
+}
+
+.sync-pm-inlineSigninRow {
+    /*row in the alert holding all the signin CTA*/
+    color: #ffffff;
+    margin-top: 10px;
+}
+
+a.sync-underline:hover,
+a.sync-underline:active,
+a.sync-underline:visited,
+a.sync-underline:default {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.sync-pm-inlineSigninRowForm {
+    /* form for the sign in*/
+    display: none;
+}
+
+.sync-pm-inlinePriceFont {
+    color: #ff0000;
+}
+.sync-pm-inlineCopyrightRow {
+    /*row containing the 'powerd by' text*/
+    margin-top: 10px;
+    text-align: center;
+}
